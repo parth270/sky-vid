@@ -38,7 +38,7 @@ const Scene = ({ randoms }) => {
       <Rig>
         <Ocean />
         {/* <SkyBox src="/sk.jpg" pos={[0, 0, 0]} /> */}
-        <Model position={[0, -3.5, 0]} scale={[3,3,3]} />
+        <Model position={[0, -3.5, 0]} scale={[2,2,2]} />
       </Rig>
     </>
   );
