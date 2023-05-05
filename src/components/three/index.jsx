@@ -28,7 +28,7 @@ const CanvasContainer = ({ curr1 }) => {
       onCreated={({ gl }) => {
         gl.toneMapping = THREE.ACESFilmicToneMapping;
       }}
-      frameloop="demand"
+  
       style={{ width: "100%", height: "100%" }}
     >
       <Suspense fallback={<Loader />}>
