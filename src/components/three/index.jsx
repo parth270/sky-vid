@@ -16,7 +16,7 @@ const CanvasContainer = ({ curr1 }) => {
   return (
     <Canvas
       camera={{
-        position: [-0.1, 0, 0],
+        position: [-0.1, 2, 0],
         fov: 65,
         rotation: [0, 270 * THREE.MathUtils.DEG2RAD, 0],
       }}
