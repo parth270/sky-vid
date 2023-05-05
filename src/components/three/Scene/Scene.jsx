@@ -33,7 +33,7 @@ const Scene = ({ randoms }) => {
       <OrbitControls/>
       <Effects />
       <Rig>
-        <SkyBox src="/beach.mp4"  pos={[0, 0, 0]}/>
+        <SkyBox src="/b33.mp4"  pos={[0, 0, 0]}/>
       </Rig>
     </>
   );
