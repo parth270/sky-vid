@@ -50,12 +50,23 @@ export default Ocean;
 
 export const SkyCover = (props) => {
   return (
+    // <Sky
+    //   distance={1000}
+    //   sunPosition={[1, 1, 0]}
+    //   inclination={0.6}
+    //   azimuth={0.25}
+
+    //   {...props}
+    // />
     <Sky
-      distance={450000}
-      sunPosition={[1, 1, 0]}
-      inclination={0}
+      distance={1000}
+      turbidity={8}
+      rayleigh={6}
+      mieCoefficient={0.005}
+      mieDirectionalG={0.8}
+      sunPosition={[10, 0, 0]}
+      inclination={0.49}
       azimuth={0.25}
-      {...props}
     />
   );
 };
