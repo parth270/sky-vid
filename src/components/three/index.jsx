@@ -23,12 +23,12 @@ const CanvasContainer = ({ curr1 }) => {
       dpr={devicePixelRatio}
       gl={{
         antialias: false,
-        powerPreference: "high-performance",
       }}
+      performance={{ min: 0.5 }}
       onCreated={({ gl }) => {
         gl.toneMapping = THREE.ACESFilmicToneMapping;
-        gl.outputEncoding = THREE.sRGBEncoding;
       }}
+      frameloop="demand"
       style={{ width: "100%", height: "100%" }}
     >
       <Suspense fallback={<Loader />}>
