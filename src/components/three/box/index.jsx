@@ -4,9 +4,9 @@ import { useTexture, useVideoTexture } from "@react-three/drei";
 import { Suspense } from "react";
 
 const SkyBox = ({ src, pos }) => {
-  const texture = useVideoTexture(src);
+  const texture = useTexture(src);
   texture.name = src;
-  texture.encoding = THREE.SRGBColorSpace
+  // texture.encoding = THREE.SRGBColorSpace
   // texture.encoding = THREE.sRGBEncoding;
 
   return (
