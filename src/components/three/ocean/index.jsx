@@ -7,8 +7,9 @@ import {
   useLoader,
   useFrame,
 } from "@react-three/fiber";
-import { OrbitControls, Sky } from "@react-three/drei";
+import { OrbitControls } from "@react-three/drei";
 import { Water } from "three-stdlib";
+import { Sky } from "@react-three/drei";
 
 extend({ Water });
 
@@ -29,13 +30,32 @@ const Ocean = () => {
       distortionScale: 3.7,
       fog: false,
       format: gl.encoding,
-    }), 
+    }),
     [waterNormals]
   );
   useFrame(
     (state, delta) => (ref.current.material.uniforms.time.value += delta)
   );
-  return <water position={[0,-3,0]} ref={ref} args={[geom, config]} rotation-x={-Math.PI / 2} />;
+  return (
+    <water
+      position={[0, -3, 0]}
+      ref={ref}
+      args={[geom, config]}
+      rotation-x={-Math.PI / 2}
+    />
+  );
 };
 
 export default Ocean;
+
+export const SkyCover = (props) => {
+  return (
+    <Sky
+      distance={450000}
+      sunPosition={[1, 1, 0]}
+      inclination={0}
+      azimuth={0.25}
+      {...props}
+    />
+  );
+};

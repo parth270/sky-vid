@@ -6,7 +6,7 @@ import Effects from "../Effects";
 import { setLoading } from "../../../services/three";
 import SkyBox from "../box";
 import { OrbitControls } from "@react-three/drei";
-import Ocean from "../ocean";
+import Ocean, { SkyCover } from "../ocean";
 import { Model } from "../ocean/island";
 
 const Rig = (props) => {
@@ -32,13 +32,16 @@ const Scene = ({ randoms }) => {
         // args={[pages[0].back]}
         args={["#fff"]}
       />
-      <OrbitControls maxPolarAngle={Math.PI / 2} target={[0,2,0]} />
+      <OrbitControls
+       maxPolarAngle={Math.PI / 2}
+        target={[0, 2, 0]} />
       <Effects />
       <ambientLight intensity={1.5} />
       <Rig>
         <Ocean />
         {/* <SkyBox src="/sk.jpg" pos={[0, 0, 0]} /> */}
-        <Model position={[0, -3.5, 0]} scale={[2,2,2]} />
+        <Model position={[0, -3.5, 0]} scale={[2, 2, 2]} />
+        <SkyCover />
       </Rig>
     </>
   );
