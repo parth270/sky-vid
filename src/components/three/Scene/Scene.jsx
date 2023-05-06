@@ -26,12 +26,27 @@ const Clouds = () => {
         <Cloud position={[0, 0, 0]} speed={1} opacity={0.7} />
         <Cloud position={[10, 0, 10]} speed={1} opacity={0.7} />
       </group>
-      <group position={[-100, 30, -100]} scale={[3, 1, 3]}>
+      <group position={[100, 30, -100]} scale={[3, 1, 3]}>
+        <Cloud position={[10, 0, -10]} speed={1} opacity={0.7} />
+        <Cloud position={[0, 0, 0]} speed={1} opacity={0.7} />
+        <Cloud position={[10, 0, 10]} speed={1} opacity={0.7} />
+      </group>
+      <group position={[0, 30, -100]} scale={[3, 1, 3]}>
         <Cloud position={[10, 0, -10]} speed={1} opacity={0.7} />
         <Cloud position={[0, 0, 0]} speed={1} opacity={0.7} />
         <Cloud position={[10, 0, 10]} speed={1} opacity={0.7} />
       </group>
       <group position={[-100, 30, 50]} scale={[3, 1, 3]}>
+        <Cloud position={[10, 0, -10]} speed={1} opacity={0.7} />
+        <Cloud position={[0, 0, 0]} speed={1} opacity={0.7} />
+        <Cloud position={[10, 0, 10]} speed={1} opacity={0.7} />
+      </group>
+      <group position={[-100, 30, -100]} scale={[3, 1, 3]}>
+        <Cloud position={[10, 0, -10]} speed={1} opacity={0.7} />
+        <Cloud position={[0, 0, 0]} speed={1} opacity={0.7} />
+        <Cloud position={[10, 0, 10]} speed={1} opacity={0.7} />
+      </group>
+      <group position={[0, 30, 100]} scale={[3, 1, 3]}>
         <Cloud position={[10, 0, -10]} speed={1} opacity={0.7} />
         <Cloud position={[0, 0, 0]} speed={1} opacity={0.7} />
         <Cloud position={[10, 0, 10]} speed={1} opacity={0.7} />
