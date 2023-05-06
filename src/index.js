@@ -6,6 +6,7 @@ import { Provider } from "react-redux";
 import HomePage from "./routes/home.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Loader from "./layouts/Loader";
+import Login from "./components/login";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,9 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
     <Loader>
-      <RouterProvider router={router} />
+      <Login>
+        <RouterProvider router={router} />
+      </Login>
     </Loader>
   </Provider>
 );
