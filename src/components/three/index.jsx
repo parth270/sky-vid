@@ -16,8 +16,8 @@ const CanvasContainer = ({ curr1 }) => {
   return (
     <Canvas
       camera={{
-        position: [-0.1, 2, 0],
-        fov: 65,
+        position: [-20, 5, 0],
+        fov: 25,
         rotation: [0, 270 * THREE.MathUtils.DEG2RAD, 0],
       }}
       dpr={devicePixelRatio}
@@ -28,7 +28,6 @@ const CanvasContainer = ({ curr1 }) => {
       onCreated={({ gl }) => {
         gl.toneMapping = THREE.ACESFilmicToneMapping;
       }}
-  
       style={{ width: "100%", height: "100%" }}
     >
       <Suspense fallback={<Loader />}>

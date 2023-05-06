@@ -6,7 +6,7 @@ const Sun = () => {
   return (
     <group position={[400, 0, 0]}>
       <mesh>
-        <sphereGeometry args={[30.05, 60, 40]} />
+        <sphereGeometry args={[10.05, 60, 40]} />
         <meshStandardMaterial
           side={THREE.DoubleSide}
           color={"#ccc"}

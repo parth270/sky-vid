@@ -10,6 +10,7 @@ import Ocean, { SkyCover } from "../ocean";
 import { Model } from "../ocean/island";
 import Background from "../background";
 import Sun from "../sun";
+import Pops from "../pops";
 
 const Rig = (props) => {
   const state = useSelector((state) => state.three);
@@ -71,7 +72,7 @@ const Scene = ({ randoms }) => {
         // args={[pages[0].back]}
         args={["#fff"]}
       />
-      <OrbitControls maxPolarAngle={Math.PI / 2} target={[0, 2, 0]} />
+      <OrbitControls maxPolarAngle={Math.PI / 2} target={[0, 5, 0]} />
       <Effects />
       <ambientLight intensity={1.5} />
       <Rig>
@@ -79,6 +80,7 @@ const Scene = ({ randoms }) => {
         <SkyBox src="/ss.jpeg" pos={[0, 0, 0]} />
         <Model position={[0, -3.5, 0]} scale={[2, 2, 2]} />
         <Clouds />
+        <Pops/>
         {/* <SkyCover /> */}
         {/* <Background /> */}
         <Sun />
