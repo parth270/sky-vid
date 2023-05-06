@@ -10,7 +10,7 @@ const Sun = () => {
         <meshStandardMaterial
           side={THREE.DoubleSide}
           color={"#ccc"}
-          emissive={"#ffe87c"}
+          emissive={"#ff`e87c"}
           toneMapped={false}
           emissiveIntensity={2}
         />
