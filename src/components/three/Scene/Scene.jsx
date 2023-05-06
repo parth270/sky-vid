@@ -8,6 +8,8 @@ import SkyBox from "../box";
 import { OrbitControls } from "@react-three/drei";
 import Ocean, { SkyCover } from "../ocean";
 import { Model } from "../ocean/island";
+import Background from "../background";
+import Sun from "../sun";
 
 const Rig = (props) => {
   const state = useSelector((state) => state.three);
@@ -39,9 +41,11 @@ const Scene = ({ randoms }) => {
       <ambientLight intensity={1.5} />
       <Rig>
         <Ocean />
-        {/* <SkyBox src="/sk.jpg" pos={[0, 0, 0]} /> */}
+        <SkyBox src="/ss.jpeg" pos={[0, 0, 0]} />
         <Model position={[0, -3.5, 0]} scale={[2, 2, 2]} />
-        <SkyCover />
+        {/* <SkyCover /> */}
+        <Background/>
+        <Sun/>
       </Rig>
     </>
   );

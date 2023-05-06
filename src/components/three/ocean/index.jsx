@@ -26,9 +26,11 @@ const Ocean = () => {
       waterNormals,
       sunDirection: new THREE.Vector3(),
       sunColor: 0xffffff,
-      waterColor: 0x001e0f,
+      // waterColor: 0x001e0f,
+      // waterColor: 0x6fd6f9,
+      waterColor:0x0000ff,
       distortionScale: 3.7,
-      fog: false,
+      fog: true,
       format: gl.encoding,
     }),
     [waterNormals]
@@ -61,10 +63,10 @@ export const SkyCover = (props) => {
     <Sky
       distance={1000}
       turbidity={8}
-      rayleigh={6}
+      rayleigh={10}
       mieCoefficient={0.005}
       mieDirectionalG={0.8}
-      sunPosition={[10, 0, 0]}
+      sunPosition={[1,4, 0]}
       inclination={0.49}
       azimuth={0.25}
     />

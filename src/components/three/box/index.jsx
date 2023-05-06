@@ -12,12 +12,12 @@ const SkyBox = ({ src, pos }) => {
   return (
     <group position={pos}>
       <mesh>
-        <sphereGeometry args={[10.05, 60, 40]} />
+        <sphereGeometry args={[900.05, 60, 40]} />
         <Suspense fallback={null}>
           <meshBasicMaterial
             side={THREE.BackSide}
-            map={texture}
-            toneMapped={false}
+            // map={texture}
+            color={"#73d9fa"}
           />
         </Suspense>
       </mesh>
