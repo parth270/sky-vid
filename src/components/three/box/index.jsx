@@ -12,7 +12,7 @@ const SkyBox = ({ src, pos }) => {
   return (
     <group position={pos}>
       <mesh>
-        <sphereGeometry args={[900.05, 60, 40]} />
+        <sphereGeometry args={[500.05, 60, 40]} />
         <Suspense fallback={null}>
           <meshBasicMaterial
             side={THREE.BackSide}

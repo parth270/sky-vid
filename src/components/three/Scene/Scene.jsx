@@ -5,7 +5,7 @@ import * as THREE from "three";
 import Effects from "../Effects";
 import { setLoading } from "../../../services/three";
 import SkyBox from "../box";
-import { OrbitControls } from "@react-three/drei";
+import { Cloud, OrbitControls } from "@react-three/drei";
 import Ocean, { SkyCover } from "../ocean";
 import { Model } from "../ocean/island";
 import Background from "../background";
@@ -16,6 +16,28 @@ const Rig = (props) => {
   const ref = useRef();
   const three = useThree();
   return <group ref={ref} {...props} />;
+};
+
+const Clouds = () => {
+  return (
+    <>
+      <group position={[100, 30, 50]} scale={[3, 1, 3]}>
+        <Cloud position={[10, 0, -10]} speed={1} opacity={0.7} />
+        <Cloud position={[0, 0, 0]} speed={1} opacity={0.7} />
+        <Cloud position={[10, 0, 10]} speed={1} opacity={0.7} />
+      </group>
+      <group position={[-100, 30, -100]} scale={[3, 1, 3]}>
+        <Cloud position={[10, 0, -10]} speed={1} opacity={0.7} />
+        <Cloud position={[0, 0, 0]} speed={1} opacity={0.7} />
+        <Cloud position={[10, 0, 10]} speed={1} opacity={0.7} />
+      </group>
+      <group position={[-100, 30, 50]} scale={[3, 1, 3]}>
+        <Cloud position={[10, 0, -10]} speed={1} opacity={0.7} />
+        <Cloud position={[0, 0, 0]} speed={1} opacity={0.7} />
+        <Cloud position={[10, 0, 10]} speed={1} opacity={0.7} />
+      </group>
+    </>
+  );
 };
 
 const Scene = ({ randoms }) => {
@@ -34,18 +56,17 @@ const Scene = ({ randoms }) => {
         // args={[pages[0].back]}
         args={["#fff"]}
       />
-      <OrbitControls
-       maxPolarAngle={Math.PI / 2}
-        target={[0, 2, 0]} />
+      <OrbitControls maxPolarAngle={Math.PI / 2} target={[0, 2, 0]} />
       <Effects />
       <ambientLight intensity={1.5} />
       <Rig>
         <Ocean />
         <SkyBox src="/ss.jpeg" pos={[0, 0, 0]} />
         <Model position={[0, -3.5, 0]} scale={[2, 2, 2]} />
+        <Clouds />
         {/* <SkyCover /> */}
-        <Background/>
-        <Sun/>
+        {/* <Background /> */}
+        <Sun />
       </Rig>
     </>
   );
