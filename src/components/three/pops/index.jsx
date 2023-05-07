@@ -1,8 +1,14 @@
 import { Html } from "@react-three/drei";
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import * as THREE from "three";
+import { setLoading } from "../../../services/three";
 
-const Frame = ({ pos, rota,text }) => {
+const Frame = ({ pos, rota, text, route }) => {
+  const [full, setFull] = useState(false);
+  const router = useNavigate();
+  const dispatch = useDispatch();
   return (
     <Html
       transform
@@ -10,8 +16,22 @@ const Frame = ({ pos, rota,text }) => {
       distanceFactor={20}
       position={pos}
       rotation={rota}
+      fullscreen={full}
     >
-      <div className="w-[300px]  flex items-center duration-300 cursor-pointer justify-center hover:border-[10px] border-[#ccc] h-[150px] bg-[#000]">
+      <div
+        onClick={() => {
+          console.log(text);
+          setFull(!full);
+          if (route) {
+            dispatch(setLoading(true));
+            setTimeout(() => {
+              setLoading(false);
+              router(route);
+            }, 1700);
+          }
+        }}
+        className="w-[300px]  flex items-center duration-300 cursor-pointer justify-center hover:border-[10px] border-[#ccc] h-[150px] bg-[#000]"
+      >
         <p className="font-mono text-[#fff]">{text}</p>
       </div>
       {/* <iframe src="https://bruno-simon.com/html/" /> */}
@@ -24,12 +44,37 @@ const Pops = () => {
 
   return (
     <>
-      <Frame pos={[30, 6, -30]} rota={[deg * 0, -deg * 40, 0]} text={"Introduction"} />
-      <Frame pos={[0, 6, -40]} rota={[deg * 0, deg *0, 0]} text={"Research Methodology"} />
-      <Frame pos={[-30, 6, -30]} rota={[deg * 0, deg * 40, 0]} text={"Horizon Results"} />
-      <Frame pos={[-30, 6, 30]} rota={[deg * 0, -deg * 220, 0]} text={"Horizon Profiles"} />
-      <Frame pos={[30, 6, 30]} rota={[deg * 0, -deg * 140, 0]} text={"Authors"} />
-      <Frame pos={[0, 6, 40]} rota={[deg * 0, deg *180, 0]} text={"Demographics"} />
+      <Frame
+        pos={[30, 6, -30]}
+        rota={[deg * 0, -deg * 40, 0]}
+        text={"Introduction"}
+      />
+      <Frame
+        pos={[0, 6, -40]}
+        rota={[deg * 0, deg * 0, 0]}
+        text={"Research Methodology"}
+      />
+      <Frame
+        pos={[-30, 6, -30]}
+        rota={[deg * 0, deg * 40, 0]}
+        text={"Horizon Results"}
+        route={"/horizon-results"}
+      />
+      <Frame
+        pos={[-30, 6, 30]}
+        rota={[deg * 0, -deg * 220, 0]}
+        text={"Horizon Profiles"}
+      />
+      <Frame
+        pos={[0, 6, 40]}
+        rota={[deg * 0, deg * 180, 0]}
+        text={"Demographics"}
+      />
+      <Frame
+        pos={[30, 6, 30]}
+        rota={[deg * 0, -deg * 140, 0]}
+        text={"Authors"}
+      />
     </>
   );
 };

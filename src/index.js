@@ -7,12 +7,17 @@ import HomePage from "./routes/home.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Loader from "./layouts/Loader";
 import Login from "./components/login";
+import HorizonResults from './routes/horizon-results'
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomePage />,
   },
+  {
+    path:"horizon-results",
+    element:<HorizonResults/>
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
