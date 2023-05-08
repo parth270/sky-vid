@@ -188,6 +188,218 @@ const HorizonResults = [
           "Partners offer kudos for end-to-end capabilities and high-quality service.",
       },
     ],
+    developmentOpportunities: [
+      {
+        title: "What we’d like to see more of",
+        content:
+          "Examples of “superfluid” outcomes at the ecosystem level. EY has the creds to deliver.",
+      },
+      {
+        title: "What we’d like to see less of",
+        content:
+          "Less “not-invented-here” syndrome and more evidence EY engages with metaverse specialist advisory partners.",
+      },
+      {
+        title: "Customer critiques",
+        content:
+          "There is room for improvement in top-line growth impact. Some suggest EY learn more of clients “as-is.”",
+      },
+      {
+        title: "Partner critiques",
+        content:
+          "The approval process can be arduous; partners would appreciate more thought leadership from EY.",
+      },
+    ],
+    relevant: [
+      {
+        title: "Acquisitions (2019–2022)",
+        content: " EY Fabernovel, digital innovation agency",
+      },
+      {
+        title: "Partnerships",
+        content: [
+          "Fireblocks, OpenSea, XMPRO, Pryon, Metaco, Vatom; Adobe, Synthesio, Qulture, Interwork Alliance, Luma.AI, Polygon, Kaleido, IBM, Deltec, Microsoft, Unity, Unreal, Babylon.js, WebXR, blender, Autodesk3DS Max, Nvidia Omniverse",
+          ,
+          "Member of the Metaverse Standards Forum and IEEE, and the Global Blockchain Business Council",
+        ],
+      },
+    ],
+    keys: [
+      {
+        title: "Number of metaverse services clients",
+        content:
+          "1,000+, including Web3 enablers such as blockchain and decentralized storage",
+      },
+      {
+        title: "Key clients",
+        content:
+          "Global jeweler, sports car maker, European media company, athletic apparel company, Swiss watchmaker, global brewer, global wine and spirits group, leading insurance provider, Fortune 10 energy company",
+      },
+    ],
+    globalMetaverse: [
+      {
+        title: "Metaverse services headcount",
+        content:
+          "EY has set growth targets of 100% and is growing its headcount exponentially in the thousands.",
+      },
+      {
+        title: "Delivery and metaverse labs",
+        content:
+          "EY Metaverse Labs has a large presence in India, the US, and worldwide. EY Wavespace has 50+ locations across the globe. Metaverse competencies also sit within the broader EY Parthenon, business consulting, technology consulting, GDS, creative services, people advisory, and tax teams. It is planning sector-specific hubs.",
+      },
+      {
+        title: "Target industries",
+        content:
+          "TMT, consumer, life sciences, real estate, public sector, financial services",
+      },
+      {
+        title: "Organization",
+        content:
+          "Centralized core, matrixed with 80% shared horizontally, 20% developed and delivered within sectors",
+      },
+    ],
+    flagship: [
+      {
+        title: "Metaverse as a Service",
+        content:
+          "metaverse enterprise risk assessment; metaverse business case generator; Web2/ Web3 capability framework; EY wavespace; experience in the Metaverse; future of human experience models",
+      },
+      {
+        title: "NFT assessment framework",
+        content:
+          "smart contract and token review; Nightfall and Starlight blockchain; EY blockchain analyzer; OpsChain NFT",
+      },
+      {
+        title: "Platform regulation and consumer rights",
+        content: "EY compliance and reporting frameworks; EY tax calculator",
+      },
+    ],
+  },
+  {
+    title: "IBM",
+    detail: " Infrastructure-led continuum of value, enabling rapid scale",
+    strengths: [
+      {
+        title: "Definition and value proposition",
+        content:
+          "IBM sees two metaverses: one that is entirely online and digital, consumed in VR, on mobile, or desktop, the other a digital unification of immersive worlds offering 3D experiences, decentralized and democratized for all. IBM’s value proposition is to create for the most accessible platforms and scale from there to work for AR/VR. IBM reasons that most enterprises don’t have the capabilities to deliver 3D content and it has equipped itself to help enterprises resolve that challenge.",
+      },
+      {
+        title: "Offerings",
+        content:
+          "IBM’s Moments to Immersion process defines needs, creates 3D assets, establishes patterns in 3D interactions, expands for multiscreen, and enhances use-case specific interactions, applying mobile and desktop, mixed and virtual reality. It offers governance, business value, and technology design services for related Web3 services.",
+      },
+      {
+        title: "Growth proof points",
+        content:
+          "IBM has invested in development of the technology ecosystem to support the Verse Engine infrastructure. It adapted design thinking materials for use with and within the metaverse. IBM used internal onboarding experiences and training to shift 2D web expertise to 3D.",
+      },
+      {
+        title: "Key differentiators",
+        content:
+          "IBM’s Verse Engine, an open source and private cloud platform, provides functional metaverse infrastructure such as identity, worlds, rooms, chat, APIs, avatars, security, and analytics, enabling rapid scaling from initial experiments.",
+      },
+      {
+        title: "Outcomes",
+        content:
+          "Outcomes include a series of POCs and pilots in retail, workplace, product showcasing, 3D branches, digital twins, and avatar assistants.",
+      },
+      {
+        title: "Customer kudos",
+        content:
+          "Clients appreciate the IBM Garage model for its collaborative partnering approach to value.",
+      },
+    ],
+    developmentOpportunities: [
+      {
+        title: "What we’d like to see more of",
+        content:
+          "IBM is strong on building an ecosystem approach with technology partners. Now we want to see it apply a OneEcosystem approach to creating new business value with business and technology partners.",
+      },
+      {
+        title: "What we’d like to see less of",
+        content:
+          "Fewer learning experiences and more profitable ones. The pieces are in place for IBM to scale its revenue generation from metaverse services.",
+      },
+      {
+        title: "Customer critiques",
+        content: "Clients find the organization hard to navigate.",
+      },
+    ],
+    relevant: [
+      {
+        title: "Acquisitions (2019–2022)",
+        content: [
+          "Dialexa: Digital product engineering",
+          "Taos: Multi-cloud consulting and managed services",
+        ],
+      },
+      {
+        title: "Partnerships",
+        content: `OpenSea, Polygon, NFT Cloud,
+        BambuMeta, MetaMask, Stripe, Zubra,
+        Crypto, Decentraland, The Sandbox,
+        Horizon, Roblox, Altspace VR,
+        Instagram, Whatsapp, WeChat, Spatial`,
+      },
+    ],
+    keys: [
+      {
+        title: "Number of metaverse services clients",
+        content: "Not available",
+      },
+      {
+        title: "Key clients",
+        content: `Juntendo Hospital
+        , Boots, UK
+        , Automotive business, more
+        than one major telco, a retail
+        bank, and a retail store`,
+      },
+    ],
+    globalMetaverse: [
+      {
+        title: "Metaverse services headcount",
+        content: "Not disclosed",
+      },
+      {
+        title: "Metaverse labs",
+        content:
+          "IBM does not have labs dedicated exclusively to metaverse work. Teams and industry leaders collaborate on metaverse topics across its 50+ innovation labs, design studios, and centers of excellence.",
+      },
+      {
+        title: "Target industries",
+        content:
+          "Retail, automotive, financial services, consumer goods, telcos",
+      },
+      {
+        title: "Organization",
+        content:
+          "Centrally organized, with vertical SMEs immersed in centralized horizontal team; practices set up at the local level with local partnering for go-to-market",
+      },
+    ],
+    flagship: [
+      {
+        content: `Verse Engine: The Verse Engine uses open-source tech to
+      provide core metaverse functions. Verse can run on private
+      cloud rather than using external services. It is containerbased and can run on Kubernetes.`,
+      },
+      {
+        content: `The platform offers`,
+      },
+      {
+        content: `Real-time player tracking`,
+      },
+      {
+        content: `Real-time session management`,
+      },
+      {
+        content: ` Integration with avatar platform`,
+      },
+      {
+        content: `Real-time in-universe audio chat`,
+      },
+    ],
   },
 ];
 
