@@ -2241,7 +2241,23 @@ system for managing the metaverse experience.`,
           "Clients appreciate UST for its flexibility, adaptability, knowledgeable automation resources, and outcome thinking. It is recognised for building deep client relationships",
       },
     ],
-
+    developmentOpportunities: [
+      {
+        title: "What we’d like to see more of:",
+        content:
+          "Vision, beyond the response-to-immediate-needs tactical responses UST is currently proving its effectiveness with.",
+      },
+      {
+        title: "What we’d like to see less of:",
+        content:
+          "UST needs to clarify its metaverse messaging. Its use of a “digital primordial soup” to set the scene for the emergence of the metaverse will serve to confuse and does not sit well with its pragmatic approach.",
+      },
+      {
+        title: "Customer critiques:",
+        content:
+          "Improve on the single-face approach to the customer. Ensure technology and business priorities are aligned.",
+      },
+    ],
     relevant: [
       {
         title: " Acquisitions (2019–2022)",
@@ -2262,15 +2278,14 @@ experiences`,
         ],
       },
     ],
-    keys:[
+    keys: [
       {
-        title:"      Number of metaverse services clients",
-        content:"8"
-      }
-      ,
-    {
-      title:"Key clients ",
-      content:`• Healthcare payer, member wellness
+        title: "      Number of metaverse services clients",
+        content: "8",
+      },
+      {
+        title: "Key clients ",
+        content: `• Healthcare payer, member wellness
       • Airline, airport ops/training
       • Payments, next-gen payment experience
       • Energy, green hydrogen, training and
@@ -2281,10 +2296,41 @@ experiences`,
       • Healthcare provider, patient adherence with
       behavioural nudges
       • Pharmaceutical, lab management and
-      equipment training`
-    }
-
-    ]
+      equipment training`,
+      },
+    ],
+    globalMetaverse: [
+      {
+        title: "Metaverse services headcount",
+        content:
+          "2022 (18), and target for 2023 (40), including 5 additions in North America, 12 in India, 5 elsewhere",
+      },
+      {
+        title: "Delivery and metaverse labs",
+        content:
+          "11 for a range of emerging tech, adding four new immersive zones in 2023 in North America, the UK, Asia-Pac, and India.",
+      },
+      {
+        title: "Target industries",
+        content:
+          "Doubling down on healthcare payer and provider, aviation, BFS, payments to extend into commerce, manufacturing, and government.",
+      },
+      {
+        title: "Organization",
+        content:
+          "Centralized with teams spread across regions including the US, the UK, Ukraine, and India, working together to create immersive experiences.",
+      },
+    ],
+    flagship: [
+      {
+        title: "UST Immersive! Experience platform ",
+        content: `Immersive
+        experience platform for developing solutions in a
+        metaverse, including recipes, composites, prefabricated
+        components, reference models, reference solutions, and
+        playbooks`,
+      },
+    ],
   },
 ];
 
