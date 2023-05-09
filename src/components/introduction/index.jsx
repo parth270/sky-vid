@@ -6,6 +6,9 @@ import TheMetaverse from "./the-metaverse";
 import CeoResponsibility from "./ceo-responsibility";
 import EnterpriseAppetite from "./enterprise-appetite";
 import EnterpriseService from "./enterprise-service";
+import ServiceProvider from "./service-provider";
+import MetaverseBiggest from "./metaverse-biggest";
+import ServicesAlready from "./services-already";
 
 const DropDown = ({ change, curr }) => {
   const [clicked, setClicked] = useState(false);
@@ -28,6 +31,16 @@ const DropDown = ({ change, curr }) => {
     },
     {
       title: "Enterprises need service providers to step up",
+    },
+    {
+      title: "Service providers lag enterprise investment intent",
+    },
+    {
+      title: "Metaverse will see biggest growth in enterprise investment",
+    },
+    {
+      title:
+        "Services—already worth $2.45 billion—will grow at an average of 15%",
     },
   ];
 
@@ -160,6 +173,48 @@ const HorizonResults = () => {
       )}
       {curr === 5 && (
         <EnterpriseService
+          dropdown={
+            <div className="w-[100%] h-[70px] flex justify-end  px-[2%]">
+              <DropDown
+                curr={curr}
+                change={(e) => {
+                  setCurr(e);
+                }}
+              />
+            </div>
+          }
+        />
+      )}
+      {curr === 6 && (
+        <ServiceProvider
+          dropdown={
+            <div className="w-[100%] h-[70px] flex justify-end  px-[2%]">
+              <DropDown
+                curr={curr}
+                change={(e) => {
+                  setCurr(e);
+                }}
+              />
+            </div>
+          }
+        />
+      )}
+      {curr === 7 && (
+        <MetaverseBiggest
+          dropdown={
+            <div className="w-[100%] h-[70px] flex justify-end  px-[2%]">
+              <DropDown
+                curr={curr}
+                change={(e) => {
+                  setCurr(e);
+                }}
+              />
+            </div>
+          }
+        />
+      )}
+      {curr === 8 && (
+        <ServicesAlready
           dropdown={
             <div className="w-[100%] h-[70px] flex justify-end  px-[2%]">
               <DropDown
