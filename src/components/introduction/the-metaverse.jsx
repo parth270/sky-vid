@@ -4,9 +4,16 @@ const ListContainer = ({ children }) => {
   return <ul className="list-outside list-disc mt-[10px]">{children}</ul>;
 };
 
-const ListChild = ({ children }) => {
+const ListChild = ({ children, color }) => {
   return (
-    <li className="text-[#000] fckin font-medium mb-[10px]">{children}</li>
+    <li
+      className="text-[#000] fckin leading-[16px] font-medium mb-[10px] "
+      style={{
+        color: color,
+      }}
+    >
+      {children}
+    </li>
   );
 };
 
@@ -51,6 +58,87 @@ const TheMetaverse = ({ dropdown }) => {
           </ListChild>
         </ListContainer>
       </div>
+      <div className="w-[90%] mx-[5%] relative h-[400px] flex items-center">
+        <img src="/aa.svg" className="absolute w-[100%] " alt="" />
+        <div
+          className="w-[100%] h-[100%] absolute flex items-center"
+          style={{
+            zIndex: 1000,
+          }}
+        >
+          <div className=" w-[25%] px-[6%] ">
+            <ListContainer>
+              <ListChild color={"#fff"}>
+                {" "}
+                <span className="text-[#fff] leading-[16px]">
+                  {" "}
+                  Cryptocurrencies
+                </span>
+              </ListChild>
+              <ListChild color={"#fff"}>
+                <span className="text-[#fff] leading-[16px]"> Stablecoins</span>
+              </ListChild>
+              <ListChild color={"#fff"}>
+                <span className="text-[#fff] leading-[16px]"> NFTs</span>
+              </ListChild>
+            </ListContainer>
+          </div>
+          <div className=" w-[25%] px-[6%] ">
+            <ListContainer>
+              <ListChild color={"#fff"}>
+                <span className="text-[#fff] leading-[16px]"> CBDC</span>
+              </ListChild>
+              <ListChild color={"#fff"}>
+                <span className="text-[#fff] leading-[16px]"> Web 3.0</span>
+              </ListChild>
+            </ListContainer>
+          </div>
+          <div className=" w-[25%] px-[6%] ">
+            <ListContainer>
+              <ListChild color={"#fff"}>
+                {" "}
+                <span className="text-[#fff] leading-[16px]"> Metaverse</span>
+              </ListChild>
+              <ListChild color={"#fff"}>
+                <span className="text-[#fff] leading-[16px]"> DeFi</span>
+              </ListChild>
+              <ListChild color={"#fff"}>
+                <span className="text-[#fff] leading-[16px]"> DAOs</span>
+              </ListChild>
+            </ListContainer>
+          </div>
+          <div className=" w-[25%] px-[6%] ">
+            <ListContainer>
+              <ListChild color={"#fff"}>
+                {" "}
+                <span className="text-[#fff] leading-[16px]">
+                  {" "}
+                  Ecosystem play
+                </span>
+              </ListChild>
+              <ListChild color={"#fff"}>
+                <span className="text-[#fff] leading-[16px]">
+                  {" "}
+                  Asset tokenization transactions
+                </span>
+              </ListChild>
+              <ListChild color={"#fff"}>
+                <span className="text-[#fff] leading-[16px]">
+                  {" "}
+                  Multiparty financial
+                </span>
+              </ListChild>
+              <ListChild color={"#fff"}>
+                <span className="text-[#fff] leading-[16px]">
+                  {" "}
+                  Supply chain track and trace
+                </span>
+              </ListChild>
+            </ListContainer>
+          </div>
+        </div>
+      </div>
+      <div className="w-[100%] h-[100px] "></div>
     </>
   );
 };
