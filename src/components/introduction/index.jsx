@@ -4,6 +4,7 @@ import Introduction from "./introduction";
 import ExecutiveSummary from "./executive-summary";
 import TheMetaverse from "./the-metaverse";
 import CeoResponsibility from "./ceo-responsibility";
+import EnterpriseAppetite from "./enterprise-appetite";
 
 const DropDown = ({ change, curr }) => {
   const [clicked, setClicked] = useState(false);
@@ -19,8 +20,11 @@ const DropDown = ({ change, curr }) => {
       title: "The Metaverse",
     },
     {
-      title:"CEOs have yet to wake up to the bigger picture on metaverse"
-    }
+      title: "CEOs have yet to wake up to the bigger picture on metaverse",
+    },
+    {
+      title: "Enterprise appetite is huge—but it lacks strategic direction",
+    },
   ];
 
   React.useEffect(() => {
@@ -48,7 +52,8 @@ const DropDown = ({ change, curr }) => {
       }}
       className="w-[200px] px-[15px] h-[45px] flex items-center tracking-wide cursor-pointer justify-center fckin bg-[#444] mt-[10px] rounded-sm relative font-medium text-[#fff] "
     >
-      {data[curr].title.substring(0, 12)}{data[curr].title.length>11 && "..."}
+      {data[curr].title.substring(0, 12)}
+      {data[curr].title.length > 11 && "..."}
       {clicked && (
         <div className="absolute w-[100%] py-[5px] top-[48px] px-[10px] min-h-[10px] bg-[#555] rounded-sm">
           {data?.map((item, i) => {
@@ -63,7 +68,8 @@ const DropDown = ({ change, curr }) => {
                 className="w-[100%] rounded-sm cursor-pointer h-[28px] my-[2px]  overflow-hidden  justify-center text-[12px] flex items-center font-medium"
               >
                 <span className="font-bold tracking-wide inline-block shrink-0">
-                  {item.title.substring(0, 12)}{item.title.length>11 && "..."}
+                  {item.title.substring(0, 12)}
+                  {item.title.length > 11 && "..."}
                 </span>
               </div>
             );
@@ -122,6 +128,20 @@ const HorizonResults = () => {
       )}
       {curr === 3 && (
         <CeoResponsibility
+          dropdown={
+            <div className="w-[100%] h-[70px] flex justify-end  px-[2%]">
+              <DropDown
+                curr={curr}
+                change={(e) => {
+                  setCurr(e);
+                }}
+              />
+            </div>
+          }
+        />
+      )}
+      {curr === 4 && (
+        <EnterpriseAppetite
           dropdown={
             <div className="w-[100%] h-[70px] flex justify-end  px-[2%]">
               <DropDown
