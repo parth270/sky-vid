@@ -5,6 +5,7 @@ import ExecutiveSummary from "./executive-summary";
 import TheMetaverse from "./the-metaverse";
 import CeoResponsibility from "./ceo-responsibility";
 import EnterpriseAppetite from "./enterprise-appetite";
+import EnterpriseService from "./enterprise-service";
 
 const DropDown = ({ change, curr }) => {
   const [clicked, setClicked] = useState(false);
@@ -24,6 +25,9 @@ const DropDown = ({ change, curr }) => {
     },
     {
       title: "Enterprise appetite is huge—but it lacks strategic direction",
+    },
+    {
+      title: "Enterprises need service providers to step up",
     },
   ];
 
@@ -142,6 +146,20 @@ const HorizonResults = () => {
       )}
       {curr === 4 && (
         <EnterpriseAppetite
+          dropdown={
+            <div className="w-[100%] h-[70px] flex justify-end  px-[2%]">
+              <DropDown
+                curr={curr}
+                change={(e) => {
+                  setCurr(e);
+                }}
+              />
+            </div>
+          }
+        />
+      )}
+      {curr === 5 && (
+        <EnterpriseService
           dropdown={
             <div className="w-[100%] h-[70px] flex justify-end  px-[2%]">
               <DropDown
