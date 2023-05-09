@@ -48,6 +48,7 @@ const Pops = () => {
         pos={[30, 6, -30]}
         rota={[deg * 0, -deg * 40, 0]}
         text={"Introduction"}
+        route={"/introduction"}
       />
       <Frame
         pos={[0, 6, -40]}

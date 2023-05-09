@@ -7,7 +7,8 @@ import HomePage from "./routes/home.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Loader from "./layouts/Loader";
 import Login from "./components/login";
-import HorizonResults from './routes/horizon-results'
+import HorizonResults from "./routes/horizon-results";
+import Introduction from './routes/introduction'
 
 const router = createBrowserRouter([
   {
@@ -15,9 +16,13 @@ const router = createBrowserRouter([
     element: <HomePage />,
   },
   {
-    path:"horizon-results",
-    element:<HorizonResults/>
-  }
+    path: "horizon-results",
+    element: <HorizonResults />,
+  },
+  {
+    path: "introduction",
+    element: <Introduction/>,
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
