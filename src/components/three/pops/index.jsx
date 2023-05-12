@@ -60,12 +60,14 @@ const Pops = () => {
         pos={[-30, 6, -30]}
         rota={[deg * 0, deg * 40, 0]}
         text={"Horizon Results"}
-        route={"/horizon-results"}
+        route={"/research-profiles"}
       />
       <Frame
         pos={[-30, 6, 30]}
         rota={[deg * 0, -deg * 220, 0]}
         text={"Horizon Profiles"}
+        route={"/horizon-profiles"}
+
       />
       <Frame
         pos={[0, 6, 40]}

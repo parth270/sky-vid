@@ -1,9 +1,5 @@
 import React, { useState } from "react";
-import Introduction from "./hypothesis";
-import AssesmentPage from "./assesment";
-import MetaEnabling from "./meta-enabling";
-import MetaServices from "./meta-services";
-import HfsHorizons from "./hfs-horizons";
+import Introduction from "./summary";
 
 const DropDown = ({ change, curr }) => {
   const [clicked, setClicked] = useState(false);
@@ -11,19 +7,7 @@ const DropDown = ({ change, curr }) => {
 
   const data = [
     {
-      title: "Hypothesis",
-    },
-    {
-      title: "Assessment methodology",
-    },
-    {
-      title: "Metaverse enabling technologies and service capabilities",
-    },
-    {
-      title: "Metaverse services may comprise a menu of old and new",
-    },
-    {
-      title: "        Sources of data",
+      title: "Summary of providers assessed in this report",
     },
   ];
 
@@ -88,62 +72,6 @@ const HorizonResults = () => {
     <div className="w-[100%] h-[100vh] bg-[#fff] scroll-bar-cool overflow-y-auto">
       {curr === 0 && (
         <Introduction
-          dropdown={
-            <div className="w-[100%] h-[70px] flex justify-end  px-[2%]">
-              <DropDown
-                change={(e) => {
-                  setCurr(e);
-                }}
-                curr={curr}
-              />
-            </div>
-          }
-        />
-      )}
-      {curr === 1 && (
-        <AssesmentPage
-          dropdown={
-            <div className="w-[100%] h-[70px] flex justify-end  px-[2%]">
-              <DropDown
-                change={(e) => {
-                  setCurr(e);
-                }}
-                curr={curr}
-              />
-            </div>
-          }
-        />
-      )}
-      {curr === 2 && (
-        <MetaEnabling
-          dropdown={
-            <div className="w-[100%] h-[70px] flex justify-end  px-[2%]">
-              <DropDown
-                change={(e) => {
-                  setCurr(e);
-                }}
-                curr={curr}
-              />
-            </div>
-          }
-        />
-      )}
-      {curr === 3&& (
-        <MetaServices
-          dropdown={
-            <div className="w-[100%] h-[70px] flex justify-end  px-[2%]">
-              <DropDown
-                change={(e) => {
-                  setCurr(e);
-                }}
-                curr={curr}
-              />
-            </div>
-          }
-        />
-      )}
-      {curr === 4&& (
-        <HfsHorizons
           dropdown={
             <div className="w-[100%] h-[70px] flex justify-end  px-[2%]">
               <DropDown
