@@ -8,7 +8,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Loader from "./layouts/Loader";
 import Login from "./components/login";
 import HorizonResults from "./routes/horizon-results";
-import Introduction from './routes/introduction'
+import Introduction from "./routes/introduction";
+import Research from "./routes/research-methodology.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,11 @@ const router = createBrowserRouter([
   },
   {
     path: "introduction",
-    element: <Introduction/>,
+    element: <Introduction />,
+  },
+  {
+    path: "research-methodology",
+    element: <Research />,
   },
 ]);
 
