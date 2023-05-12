@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Introduction from "./summary";
+import Guides from "./guides";
 
 const DropDown = ({ change, curr }) => {
   const [clicked, setClicked] = useState(false);
@@ -8,6 +9,9 @@ const DropDown = ({ change, curr }) => {
   const data = [
     {
       title: "Demographics",
+    },
+    {
+      title: "Guides and definitions",
     },
   ];
 
@@ -72,6 +76,20 @@ const HorizonResults = () => {
     <div className="w-[100%] h-[100vh] bg-[#fff] scroll-bar-cool overflow-y-auto">
       {curr === 0 && (
         <Introduction
+          dropdown={
+            <div className="w-[100%] h-[70px] flex justify-end  px-[2%]">
+              <DropDown
+                change={(e) => {
+                  setCurr(e);
+                }}
+                curr={curr}
+              />
+            </div>
+          }
+        />
+      )}
+      {curr === 1 && (
+        <Guides
           dropdown={
             <div className="w-[100%] h-[70px] flex justify-end  px-[2%]">
               <DropDown
