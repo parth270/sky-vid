@@ -140,21 +140,35 @@ const Pie4 = () => {
     ></iframe>
   );
 };
+const Chart5 = () => {
+  return (
+    <iframe
+      src="https://flo.uri.sh/visualisation/13735366/embed"
+      title="Interactive or visual content"
+      class="flourish-embed-iframe w-[100%] h-[540px] p-[20px] "
+      frameborder="0"
+      scrolling="no"
+      sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
+    ></iframe>
+  );
+};
 
 const ColorShow = ({ data }) => {
   return (
     <>
-      <div className="h-[100%] w-[80px] flex mr-[10px] flex-col ">
+      <div className="h-[100%] w-[160px] flex mr-[10px] flex-col ">
         {data.map((item, i) => {
           return (
             <div className="flex items-center ">
               <div
-                className="w-[12px] translate-y-[1px] mr-[5px] h-[12px]"
+                className="w-[12px] mr-[5px] h-[12px]"
                 style={{
                   backgroundColor: item.color,
                 }}
               ></div>
-              <span className="whitespace-nowrap">{item.title}</span>
+              <span className=" font-medium fckin text-[12px]">
+                {item.title}
+              </span>
             </div>
           );
         })}
@@ -208,15 +222,15 @@ const AssesmentPage = ({ dropdown }) => {
                   data={[
                     {
                       color: "#723c82",
-                      title: "IT",
+                      title: "Architecture",
                     },
                     {
                       color: "#f17238",
-                      title: "Business",
+                      title: "Software engineering",
                     },
                     {
                       color: "#7d92a2",
-                      title: "Business",
+                      title: "Digital",
                     },
                   ]}
                 />
@@ -234,23 +248,23 @@ const AssesmentPage = ({ dropdown }) => {
                   data={[
                     {
                       color: "#723c82",
-                      title: "IT",
+                      title: "North America",
                     },
                     {
                       color: "#f17238",
-                      title: "Business",
+                      title: "LATAM",
                     },
                     {
                       color: "#7d92a2",
-                      title: "Business",
+                      title: "Europe",
                     },
                     {
                       color: "#b4b6bf",
-                      title: "Business",
+                      title: "India",
                     },
                     {
                       color: "#ceccd3",
-                      title: "Business",
+                      title: "Aus-NZ",
                     },
                   ]}
                 />
@@ -266,30 +280,35 @@ const AssesmentPage = ({ dropdown }) => {
                   data={[
                     {
                       color: "#723c82",
-                      title: "IT",
+                      title: "Finance, treasury",
                     },
                     {
                       color: "#f17238",
-                      title: "Business",
+                      title: "Marketing",
                     },
                     {
                       color: "#7d92a2",
-                      title: "Business",
+                      title: "Operations",
                     },
                     {
                       color: "#b4b6bf",
-                      title: "Business",
+                      title: "Business,shared services",
                     },
                     {
                       color: "#ceccd3",
-                      title: "Business",
+                      title: "Stratey, innovation, R&D",
                     },
                   ]}
                 />
               </div>
             </div>
           </div>
-          <div className="w-[33.33%] h-[600px] border-[1px] border-[#000]"></div>
+          <div className="w-[33.33%] h-[600px] overflow-hidden border-[1px] border-[#000]">
+            <h1 className="h-[50px] flex items-center pl-[30px] mt-[20px] tracking-wide text-[#000] font-bold fckin ">
+              What do customers use metaverse service providers for?
+            </h1>
+            <Chart5 />
+          </div>
         </div>
       </div>
     </>
