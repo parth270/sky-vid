@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Introduction from "./hypothesis";
 import AssesmentPage from "./assesment";
+import MetaEnabling from "./meta-enabling";
+import MetaServices from "./meta-services";
 
 const DropDown = ({ change, curr }) => {
   const [clicked, setClicked] = useState(false);
@@ -12,6 +14,15 @@ const DropDown = ({ change, curr }) => {
     },
     {
       title: "Assessment methodology",
+    },
+    {
+      title: "Metaverse enabling technologies and service capabilities",
+    },
+    {
+      title: "Metaverse services may comprise a menu of old and new",
+    },
+    {
+      title: "HFS Horizons: What makes a Horizon 1, 2 or 3 provider?",
     },
   ];
 
@@ -43,7 +54,9 @@ const DropDown = ({ change, curr }) => {
       {data[curr].title.substring(0, 12)}
       {data[curr].title.length > 11 && "..."}
       {clicked && (
-        <div className="absolute w-[100%] py-[5px] top-[48px] px-[10px] min-h-[10px] bg-[#555] rounded-sm">
+        <div style={{
+          zIndex:1000000000
+        }} className="absolute w-[100%] py-[5px] top-[48px] px-[10px] min-h-[10px] bg-[#555] rounded-sm">
           {data?.map((item, i) => {
             return (
               <div
@@ -88,6 +101,34 @@ const HorizonResults = () => {
       )}
       {curr === 1 && (
         <AssesmentPage
+          dropdown={
+            <div className="w-[100%] h-[70px] flex justify-end  px-[2%]">
+              <DropDown
+                change={(e) => {
+                  setCurr(e);
+                }}
+                curr={curr}
+              />
+            </div>
+          }
+        />
+      )}
+      {curr === 2 && (
+        <MetaEnabling
+          dropdown={
+            <div className="w-[100%] h-[70px] flex justify-end  px-[2%]">
+              <DropDown
+                change={(e) => {
+                  setCurr(e);
+                }}
+                curr={curr}
+              />
+            </div>
+          }
+        />
+      )}
+      {curr === 3&& (
+        <MetaServices
           dropdown={
             <div className="w-[100%] h-[70px] flex justify-end  px-[2%]">
               <DropDown

@@ -34,7 +34,7 @@ const DropDown = ({ change, curr, data }) => {
       onClick={() => {
         setClicked(true);
       }}
-      className="w-[300px] px-[10px] h-[45px] flex items-center tracking-wide cursor-pointer justify-center fckin bg-[#444] mt-[10px] rounded-sm relative font-medium text-[#fff] "
+      className="w-[100%] whitespace-nowrap px-[10px] h-[45px] flex items-center tracking-wide cursor-pointer justify-center fckin bg-[#444] mt-[10px] rounded-sm relative font-medium text-[#fff] "
     >
       {data[curr].title.substring(0, 49)}
       {data[curr].title.length > 50 && "..."}
@@ -55,7 +55,7 @@ const DropDown = ({ change, curr, data }) => {
                 className="w-[100%] rounded-sm cursor-pointer h-[28px] my-[2px]  overflow-hidden  justify-center text-[12px] flex items-center font-medium"
               >
                 <span className="font-bold tracking-wide inline-block shrink-0">
-                  {item.title.substring(0, 40)}
+                  {item.title.substring(0, 100)}
                   {item.title.length > 11 && "..."}
                 </span>
               </div>
@@ -83,12 +83,15 @@ const LotsData = () => {
   return (
     <div className="w-[100%] min-h-[100px] mt-[30px] flex justify-between ">
       <div className="w-[45%] ">
+        <h3 className="font-bold fckin text-[30px] leading-[50px]" >
+        • Assesment Dimension:
+        </h3>
         <DropDown
           data={assesment}
           curr={curr}
           change={(e) => {
             setCurr(e);
-            setHorizon(0)
+            setHorizon(0);
           }}
         />
         <ListContainer>
@@ -98,6 +101,9 @@ const LotsData = () => {
         </ListContainer>
       </div>
       <div className="w-[45%]">
+      <h3 className="font-bold fckin text-[30px] leading-[50px]" >
+        • Horizon Service Providers:
+        </h3>
         <DropDown
           data={[
             {
