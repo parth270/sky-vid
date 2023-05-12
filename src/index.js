@@ -11,6 +11,8 @@ import HorizonResults from "./routes/horizon-results";
 import Introduction from "./routes/introduction";
 import Research from "./routes/research-methodology.jsx";
 import Profiles from "./routes/research-profiles.jsx";
+import Demographics from "./routes/demographics.jsx";
+import Authors from "./routes/authors.jsx";
 
 const router = createBrowserRouter([
   {
@@ -31,7 +33,15 @@ const router = createBrowserRouter([
   },
   {
     path: "research-profiles",
-    element: <Profiles/>,
+    element: <Profiles />,
+  },
+  {
+    path: "demographics",
+    element: <Demographics />,
+  },
+  {
+    path: "authors",
+    element: <Authors />,
   },
 ]);
 

@@ -67,17 +67,18 @@ const Pops = () => {
         rota={[deg * 0, -deg * 220, 0]}
         text={"Horizon Profiles"}
         route={"/horizon-profiles"}
-
       />
       <Frame
         pos={[0, 6, 40]}
         rota={[deg * 0, deg * 180, 0]}
         text={"Demographics"}
+        route={"demographics"}
       />
       <Frame
         pos={[30, 6, 30]}
         rota={[deg * 0, -deg * 140, 0]}
         text={"Authors"}
+        route={"authors"}
       />
     </>
   );

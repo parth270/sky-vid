@@ -28,5 +28,15 @@ code {
 .scroll-bar-cool::-webkit-scrollbar-thumb {
   background-color: #f17238;
   border-radius: 12px;
+}
+
+.scroll-bar-cool-1::-webkit-scrollbar {
+  width:5px;
+  background-color: #cccccc00;
+}
+
+.scroll-bar-cool-1::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 12px;
 
 }
