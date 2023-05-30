@@ -79,8 +79,12 @@ const LotsData = () => {
           }}
         />
         <div className="mt-[30px]">
-          <h2 className="font-bold text-[24px] tracking-wider text-[#000] fckin ">{data.title}</h2>
-          <p  className="font-medium mt-[10px] text-[18px] tracking-wider text-[#000] fckin ">{data.list}</p>
+          <h2 className="font-bold text-[24px] tracking-wider text-[#000] fckin ">
+            {data.title}
+          </h2>
+          <p className="font-medium mt-[10px] text-[18px] tracking-wider text-[#000] fckin ">
+            {data.list}
+          </p>
         </div>
       </div>
     </div>

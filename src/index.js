@@ -49,9 +49,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <Provider store={store}>
     <Loader>
-      <Login>
-        <RouterProvider router={router} />
-      </Login>
+      <RouterProvider router={router} />
     </Loader>
   </Provider>
 );
