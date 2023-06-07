@@ -21,14 +21,27 @@ const LowerList = ({ children }) => {
   return <div className="flex flex-col mt-[10px]">{children}</div>;
 };
 
+const Title = ({ title, width }) => {
+  return (
+    <h1 className="w-[100%]  px-[5%] h-[70px] text-[40px] fckin text-[#535E6F]">
+      {title}
+      <div
+        className=" h-[2px] bg-[#535e65]"
+        style={{ width: `${width}%` }}
+      ></div>
+    </h1>
+  );
+};
+
 const TheMetaverse = () => {
   return (
     <>
-      <div className="w-[100%] overflow-y-auto scroll-hidden h-[92%]  px-[5%] mt-[30px]">
-        <h1 className=" fckin text-[#386179] text-[40px] font-medium border-l-[10px] border-[#f17238] h-[100px] flex items-center pl-[5%]">
-          The metaverse has moved from thought experiment to value
-        </h1>
-        <div className="w-[100%] min-h-[100px]  px-[5%] mt-[30px]">
+      <Title
+        title="The metaverse has moved from thought experiment to value"
+        width={100}
+      />
+      <div className="w-[100%] scroll-hidden h-[92%]  px-[5%] ">
+        <div className="w-[100%] min-h-[100px]  px-[5%]">
           <ListContainer>
             <ListChild>
               <span className="text-[16px] font-bold ">
@@ -58,7 +71,7 @@ const TheMetaverse = () => {
             </ListChild>
           </ListContainer>
         </div>
-        <div className="w-[90%] mx-[5%] relative h-[400px] flex items-center">
+        <div className="w-[90%] mx-[5%] relative h-[400px] translate-y-[-30px] flex items-center">
           <img src="/aa.svg" className="absolute w-[100%] " alt="" />
           <div
             className="w-[100%] h-[100%] absolute flex items-center"

@@ -14,14 +14,26 @@ const LowerList = ({ children }) => {
   return <div className="flex flex-col mt-[10px]">{children}</div>;
 };
 
+const Title = ({ title, width }) => {
+  return (
+    <h1 className="w-[100%]  px-[5%] min-h-[70px] text-[40px] fckin text-[#535E6F]">
+      {title}
+      <div
+        className=" h-[2px] bg-[#535e65]"
+        style={{ width: `${width}%` }}
+      ></div>
+    </h1>
+  );
+};
+{
+  /* <div className="w-[100%] overflow-y-auto scroll-hidden h-[92%]  px-[5%] "> */
+}
+
 const ServicesAlready = ({ dropdown }) => {
   return (
     <>
-      <h1 className=" fckin text-[#386179] text-[40px] font-medium border-l-[10px] border-[#f17238] h-[100px] flex items-center pl-[5%]">
-        Services—already worth $2.45 billion—will grow at an average of 15%
-      </h1>
-      {dropdown}
-      <div className="w-[100%] flex items-center mt-[30px] justify-between px-[10%] ">
+      <Title title="Services—already worth $2.45 billion—will grow at an average of 15%" />
+      <div className="w-[100%] overflow-y-auto flex justify-between scroll-hidden h-[92%]  px-[5%] ">
         <div className="w-[45%] shrink-0 h-[600px]">
           <p className="text-[22px] text-[#000] fckin tracking-wide font-bold">
             Metaverse services revenues
@@ -29,7 +41,7 @@ const ServicesAlready = ({ dropdown }) => {
           <iframe
             src="https://flo.uri.sh/visualisation/13699500/embed"
             title="Interactive or visual content"
-            class="px-[5%] flourish-embed-iframe mt-[30px]"
+            class="flourish-embed-iframe mt-[30px]"
             frameborder="0"
             scrolling="no"
             style={{ width: "100%", height: "500px" }}
@@ -43,7 +55,7 @@ const ServicesAlready = ({ dropdown }) => {
           <iframe
             src="https://flo.uri.sh/visualisation/13699526/embed"
             title="Interactive or visual content"
-            class="px-[5%] flourish-embed-iframe mt-[30px]"
+            class=" flourish-embed-iframe mt-[30px]"
             frameborder="0"
             scrolling="no"
             style={{ width: "100%", height: "500px" }}
