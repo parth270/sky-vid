@@ -92,14 +92,14 @@ const Pops = () => {
         rota={[deg * 0, -deg * 140, 0]}
         text={"Demographics"}
         route={"demographics"}
-        i={4}
+        i={5}
       />
       <Frame
         pos={[0, 15, 40]}
         rota={[deg * 0, deg * 180, 0]}
         text={"Authors"}
         route={"authors"}
-        i={5}
+        i={4}
       />
     </>
   );

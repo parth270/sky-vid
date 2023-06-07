@@ -18,7 +18,6 @@ const CanvasContainer = ({ curr1 }) => {
       camera={{
         position: [-20, 5, 0],
         fov: 25,
-        rotation: [0, 270 * THREE.MathUtils.DEG2RAD, 0],
       }}
       dpr={devicePixelRatio}
       gl={{

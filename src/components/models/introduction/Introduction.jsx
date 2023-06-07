@@ -8,9 +8,11 @@ import EnterpriseService from "./enterprise-service";
 import ServiceProvider from "./service-provider";
 import MetaverseBiggest from "./metaverse-biggest";
 import ServicesAlready from "./services-already";
-
+import { useDispatch } from "react-redux";
+import {setCurr} from '../../../services/Model'
 const Introduction = () => {
-  const [curr, setCurr] = useState(0);
+  const [curr, setCurr1] = useState(0);
+  const dispatch = useDispatch();
 
   return (
     <div
@@ -24,10 +26,10 @@ const Introduction = () => {
       </div>
       <div className="pb-[30px] pt-[20px] overflow-hidden  scroll-hidden w-[1300px] h-[550px] shrink-0 bg-[#ffffff90] backdrop-blur-lg mt-[20px] mb-[10px] rounded-[20px]">
         <div className="w-[100%] flex items-center h-[40px] justify-center absolute top-0 ">
-          <img  
+          <img
             onClick={() => {
               if (curr !== 0) {
-                setCurr(curr - 1);
+                setCurr1(curr - 1);
               }
             }}
             src="/arrow.svg"
@@ -35,7 +37,14 @@ const Introduction = () => {
             alt=""
           />
         </div>
-        <img src="/cross.svg" className="absolute top-[20px] right-[40px] w-[24px] h-[24px] cursor-pointer" alt="" />
+        <img
+          src="/cross.svg"
+          className="absolute top-[20px] right-[40px] w-[24px] h-[24px] cursor-pointer"
+          alt=""
+          onClick={() => {
+            dispatch(setCurr(null));
+          }}
+        />
         {curr === 0 && <Pop1 />}
         {curr === 1 && <Pop2 />}
         {curr === 2 && <TheMetaverse />}
@@ -51,7 +60,7 @@ const Introduction = () => {
           src="/arrow.svg"
           onClick={() => {
             if (curr !== 8) {
-              setCurr(curr + 1);
+              setCurr1(curr + 1);
             }
           }}
           className="w-[40px] h-[40px] movingElement "
@@ -62,4 +71,4 @@ const Introduction = () => {
   );
 };
 
-export default Introduction;
+export default React.memo(Introduction);
