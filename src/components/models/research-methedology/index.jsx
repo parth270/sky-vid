@@ -19,9 +19,9 @@ const ResearchMeth = () => {
       }}
     >
       <div className="h-[42px] rounded-[30px] bg-[#f17238]  px-[30px] min-w-[300px] flex items-center justify-center text-[20px] font-medium capitalize text-[#fff] ">
-        <span className="translate-y-[1px]">Introduction</span>
+        <span className="translate-y-[1px]">Research Mehtedology</span>
       </div>
-      <div className="pb-[30px] pt-[20px] overflow-hidden  scroll-hidden w-[1300px] h-[550px] shrink-0 bg-[#ffffff90] backdrop-blur-lg mt-[20px] mb-[10px] rounded-[20px]">
+      <div className="pb-[5px] pt-[5px] overflow-hidden  scroll-hidden w-[1400px] h-[600px] shrink-0 bg-[#ffffff90] backdrop-blur-lg mt-[20px] mb-[10px] rounded-[20px]">
         <div className="w-[100%] flex items-center h-[40px] justify-center absolute top-0 ">
           <img
             onClick={() => {
@@ -41,7 +41,7 @@ const ResearchMeth = () => {
 
         <img
           src="/cross.svg"
-          className="absolute top-[20px] right-[40px] w-[24px] h-[24px] cursor-pointer z-50"
+          className="absolute top-[15px] right-[20px] w-[24px] h-[24px] cursor-pointer z-50"
           alt=""
           onClick={() => {
             dispatch(setCurr(null));
