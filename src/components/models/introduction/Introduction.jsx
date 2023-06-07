@@ -9,9 +9,10 @@ import ServiceProvider from "./service-provider";
 import MetaverseBiggest from "./metaverse-biggest";
 import ServicesAlready from "./services-already";
 import { useDispatch } from "react-redux";
-import {setCurr} from '../../../services/Model'
+import { setCurr } from "../../../services/Model";
 const Introduction = () => {
   const [curr, setCurr1] = useState(0);
+  const [trans, setTrans] = useState(true);
   const dispatch = useDispatch();
 
   return (
@@ -29,7 +30,11 @@ const Introduction = () => {
           <img
             onClick={() => {
               if (curr !== 0) {
-                setCurr1(curr - 1);
+                setTrans(false);
+                setTimeout(() => {
+                  setCurr1(curr - 1);
+                  setTrans(true);
+                }, 600);
               }
             }}
             src="/arrow.svg"
@@ -39,28 +44,32 @@ const Introduction = () => {
         </div>
         <img
           src="/cross.svg"
-          className="absolute top-[20px] right-[40px] w-[24px] h-[24px] cursor-pointer"
+          className="absolute top-[20px] right-[40px] w-[24px] h-[24px] cursor-pointer z-50"
           alt=""
           onClick={() => {
             dispatch(setCurr(null));
           }}
         />
-        {curr === 0 && <Pop1 />}
-        {curr === 1 && <Pop2 />}
-        {curr === 2 && <TheMetaverse />}
-        {curr === 3 && <CeoResponsibility />}
-        {curr === 4 && <EnterpriseAppetite />}
-        {curr === 5 && <EnterpriseService />}
-        {curr === 6 && <ServiceProvider />}
-        {curr === 7 && <MetaverseBiggest />}
-        {curr === 8 && <ServicesAlready />}
+        {curr === 0 && <Pop1 trans={trans} />}
+        {curr === 1 && <Pop2 trans={trans} />}
+        {curr === 2 && <TheMetaverse trans={trans} />}
+        {curr === 3 && <CeoResponsibility trans={trans} />}
+        {curr === 4 && <EnterpriseAppetite trans={trans} />}
+        {curr === 5 && <EnterpriseService trans={trans} />}
+        {curr === 6 && <ServiceProvider trans={trans} />}
+        {curr === 7 && <MetaverseBiggest trans={trans} />}
+        {curr === 8 && <ServicesAlready trans={trans} />}
       </div>
       <div className="w-[100%] h-[100px] flex items-center justify-center rotate-180 cursor-pointer">
         <img
           src="/arrow.svg"
           onClick={() => {
             if (curr !== 8) {
-              setCurr1(curr + 1);
+              setTrans(false);
+              setTimeout(() => {
+                setCurr1(curr + 1);
+                setTrans(true);
+              }, 600);
             }
           }}
           className="w-[40px] h-[40px] movingElement "
