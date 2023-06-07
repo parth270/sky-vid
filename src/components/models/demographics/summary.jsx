@@ -1,6 +1,30 @@
 import React, { useState } from "react";
 import assesment from "./assesmentData";
+import { Tween } from "react-gsap";
 
+const Title = ({ title, width, trans }) => {
+  return (
+    <Tween
+      from={{
+        opacity: 0,
+        y: -20,
+      }}
+      to={{
+        opacity: trans ? 1 : 0,
+        y: trans ? 0 : -20,
+      }}
+      duration={0.5}
+    >
+      <h1 className="w-[100%]  px-[5%] h-[70px] text-[40px] fckin text-[#535E6F]">
+        {title}
+        <div
+          className=" h-[2px] bg-[#535e65]"
+          style={{ width: `${width}%` }}
+        ></div>
+      </h1>
+    </Tween>
+  );
+};
 const DropDown = ({ change, curr, data }) => {
   const [clicked, setClicked] = useState(false);
   const [hover, setHover] = useState(false);
@@ -96,7 +120,7 @@ const Pie1 = () => {
     <iframe
       src="https://flo.uri.sh/visualisation/13734775/embed"
       title="Interactive or visual content"
-      class="flourish-embed-iframe w-[240px] h-[240px] ml-[20px]"
+      class="flourish-embed-iframe w-[180px] h-[180px] ml-[20px]"
       frameborder="0"
       scrolling="no"
       sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
@@ -109,7 +133,7 @@ const Pie2 = () => {
     <iframe
       src="https://flo.uri.sh/visualisation/13734949/embed"
       title="Interactive or visual content"
-      class="flourish-embed-iframe w-[240px] h-[240px] ml-[20px]"
+      class="flourish-embed-iframe w-[180px] h-[180px] ml-[20px]"
       frameborder="0"
       scrolling="no"
       sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
@@ -121,7 +145,7 @@ const Pie3 = () => {
     <iframe
       src="https://flo.uri.sh/visualisation/13735027/embed"
       title="Interactive or visual content"
-      class="flourish-embed-iframe w-[240px] h-[240px] ml-[20px]"
+      class="flourish-embed-iframe w-[180px] h-[180px] ml-[20px]"
       frameborder="0"
       scrolling="no"
       sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
@@ -133,7 +157,7 @@ const Pie4 = () => {
     <iframe
       src="https://flo.uri.sh/visualisation/13735061/embed"
       title="Interactive or visual content"
-      class="flourish-embed-iframe w-[240px] h-[240px] ml-[20px]"
+      class="flourish-embed-iframe w-[180px] h-[180px] ml-[20px]"
       frameborder="0"
       scrolling="no"
       sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
@@ -145,7 +169,7 @@ const Chart5 = () => {
     <iframe
       src="https://flo.uri.sh/visualisation/13735366/embed"
       title="Interactive or visual content"
-      class="flourish-embed-iframe w-[100%] h-[540px] p-[20px] "
+      class="flourish-embed-iframe w-[100%] h-[420px] p-[20px] "
       frameborder="0"
       scrolling="no"
       sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
@@ -177,139 +201,160 @@ const ColorShow = ({ data }) => {
   );
 };
 
-const AssesmentPage = ({ dropdown }) => {
+const AssesmentPage = ({ dropdown, trans }) => {
   return (
     <>
-      <h1 className=" fckin text-[#386179] text-[40px] font-medium border-l-[10px] border-[#f17238] h-[100px] flex items-center pl-[5%]">
-        Demographics
-      </h1>
-      {dropdown}
-      <div className="w-[100%] min-h-[100px]  px-[5%] mt-[30px]">
-        <h2 className="text-[19px] font-bold fckin tracking-wide">
-          Our cohort of metaverse services providers provided customer
-          references. References hold decision-making roles in Global 2000
-          enterprises
-        </h2>
-        <div className="w-[100%] flex h-[600px] border-[1px] border-[#000] justify-between mt-[50px] mb-[70px]">
-          <div className="w-[33.33%] h-[600px]">
-            <div className="w-[100%] h-[300px] border-[1px] border-[#000] overflow-hidden">
-              <h1 className="h-[50px] flex items-center pl-[30px] tracking-wide text-[#000] font-bold fckin ">
-                Heading
-              </h1>
-              <div className="flex justify-between items-center">
-                <Pie1 />
-                <ColorShow
-                  data={[
-                    {
-                      color: "#723c82",
-                      title: "IT",
-                    },
-                    {
-                      color: "#f17238",
-                      title: "Business",
-                    },
-                  ]}
-                />
+      {/* <Title title={"Demographics"} width={100} trans={trans} /> */}
+      <div className="w-[100%] min-h-[100px]  px-[5%] mt-[5px]">
+        <Tween
+          from={{
+            opacity: 0,
+            y: -20,
+          }}
+          to={{
+            opacity: trans ? 1 : 0,
+            y: trans ? 0 : -20,
+          }}
+          duration={0.5}
+        >
+          <h2 className="text-[19px] font-bold fckin tracking-wide">
+            Our cohort of metaverse services providers provided customer
+            references. References hold decision-making roles in Global 2000
+            enterprises
+          </h2>
+        </Tween>
+        <Tween
+          from={{
+            opacity: 0,
+            y: -20,
+          }}
+          to={{
+            opacity: trans ? 1 : 0,
+            y: trans ? 0 : -20,
+          }}
+          duration={0.5}
+        >
+          <div className="w-[100%] flex h-[480px] border-[1px] border-[#000] justify-between mt-[8px] mb-[70px]">
+            <div className="w-[33.33%] h-[450px]">
+              <div className="w-[100%] h-[240px] border-[1px] border-[#000] overflow-hidden">
+                <h1 className="h-[50px] flex items-center pl-[30px] tracking-wide text-[#000] font-bold fckin ">
+                  Heading
+                </h1>
+                <div className="flex justify-between items-center">
+                  <Pie1 />
+                  <ColorShow
+                    data={[
+                      {
+                        color: "#723c82",
+                        title: "IT",
+                      },
+                      {
+                        color: "#f17238",
+                        title: "Business",
+                      },
+                    ]}
+                  />
+                </div>
+              </div>
+              <div className="w-[100%] h-[240px] border-[1px] border-[#000] overflow-hidden">
+                <h1 className="h-[50px] flex items-center pl-[30px] tracking-wide text-[#000] font-bold fckin ">
+                  Primary IT roles among respondents
+                </h1>
+                <div className="flex justify-between items-center">
+                  <Pie3 />
+                  <ColorShow
+                    data={[
+                      {
+                        color: "#723c82",
+                        title: "Architecture",
+                      },
+                      {
+                        color: "#f17238",
+                        title: "Software engineering",
+                      },
+                      {
+                        color: "#7d92a2",
+                        title: "Digital",
+                      },
+                    ]}
+                  />
+                </div>
               </div>
             </div>
-            <div className="w-[100%] h-[300px] border-[1px] border-[#000] overflow-hidden">
-              <h1 className="h-[50px] flex items-center pl-[30px] tracking-wide text-[#000] font-bold fckin ">
-                Primary IT roles among respondents
-              </h1>
-              <div className="flex justify-between items-center">
-                <Pie3 />
-                <ColorShow
-                  data={[
-                    {
-                      color: "#723c82",
-                      title: "Architecture",
-                    },
-                    {
-                      color: "#f17238",
-                      title: "Software engineering",
-                    },
-                    {
-                      color: "#7d92a2",
-                      title: "Digital",
-                    },
-                  ]}
-                />
+            <div className="w-[33.33%] h-[480px]">
+              <div className="w-[100%] h-[240px] border-[1px] border-[#000] overflow-hidden">
+                <h1 className="h-[50px] flex items-center pl-[30px] tracking-wide text-[#000] font-bold fckin ">
+                  Location of respondents
+                </h1>
+                <div className="flex justify-between items-center">
+                  <Pie2 />
+                  <ColorShow
+                    data={[
+                      {
+                        color: "#723c82",
+                        title: "North America",
+                      },
+                      {
+                        color: "#f17238",
+                        title: "LATAM",
+                      },
+                      {
+                        color: "#7d92a2",
+                        title: "Europe",
+                      },
+                      {
+                        color: "#b4b6bf",
+                        title: "India",
+                      },
+                      {
+                        color: "#ceccd3",
+                        title: "Aus-NZ",
+                      },
+                    ]}
+                  />
+                </div>
               </div>
+              <div className="w-[100%] h-[240px] border-[1px] border-[#000] overflow-hidden">
+                <h1 className="h-[50px] flex items-center pl-[30px] tracking-wide text-[#000] font-bold fckin ">
+                  Primary business roles among respondents
+                </h1>
+                <div className="flex justify-between items-center">
+                  <Pie4 />
+                  <ColorShow
+                    data={[
+                      {
+                        color: "#723c82",
+                        title: "Finance, treasury",
+                      },
+                      {
+                        color: "#f17238",
+                        title: "Marketing",
+                      },
+                      {
+                        color: "#7d92a2",
+                        title: "Operations",
+                      },
+                      {
+                        color: "#b4b6bf",
+                        title: "Business,shared services",
+                      },
+                      {
+                        color: "#ceccd3",
+                        title: "Stratey, innovation, R&D",
+                      },
+                    ]}
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="w-[33.33%] h-[480px] overflow-hidden border-[1px] border-[#000]">
+              <h1 className="h-[50px] flex items-center pl-[30px] mt-[20px] tracking-wide text-[#000] font-bold fckin ">
+                What do customers use metaverse service providers for?
+              </h1>
+              <Chart5 />
             </div>
           </div>
-          <div className="w-[33.33%] h-[600px]">
-            <div className="w-[100%] h-[300px] border-[1px] border-[#000] overflow-hidden">
-              <h1 className="h-[50px] flex items-center pl-[30px] tracking-wide text-[#000] font-bold fckin ">
-                Location of respondents
-              </h1>
-              <div className="flex justify-between items-center">
-                <Pie2 />
-                <ColorShow
-                  data={[
-                    {
-                      color: "#723c82",
-                      title: "North America",
-                    },
-                    {
-                      color: "#f17238",
-                      title: "LATAM",
-                    },
-                    {
-                      color: "#7d92a2",
-                      title: "Europe",
-                    },
-                    {
-                      color: "#b4b6bf",
-                      title: "India",
-                    },
-                    {
-                      color: "#ceccd3",
-                      title: "Aus-NZ",
-                    },
-                  ]}
-                />
-              </div>
-            </div>
-            <div className="w-[100%] h-[300px] border-[1px] border-[#000] overflow-hidden">
-              <h1 className="h-[50px] flex items-center pl-[30px] tracking-wide text-[#000] font-bold fckin ">
-                Primary business roles among respondents
-              </h1>
-              <div className="flex justify-between items-center">
-                <Pie4 />
-                <ColorShow
-                  data={[
-                    {
-                      color: "#723c82",
-                      title: "Finance, treasury",
-                    },
-                    {
-                      color: "#f17238",
-                      title: "Marketing",
-                    },
-                    {
-                      color: "#7d92a2",
-                      title: "Operations",
-                    },
-                    {
-                      color: "#b4b6bf",
-                      title: "Business,shared services",
-                    },
-                    {
-                      color: "#ceccd3",
-                      title: "Stratey, innovation, R&D",
-                    },
-                  ]}
-                />
-              </div>
-            </div>
-          </div>
-          <div className="w-[33.33%] h-[600px] overflow-hidden border-[1px] border-[#000]">
-            <h1 className="h-[50px] flex items-center pl-[30px] mt-[20px] tracking-wide text-[#000] font-bold fckin ">
-              What do customers use metaverse service providers for?
-            </h1>
-            <Chart5 />
-          </div>
-        </div>
+        </Tween>
       </div>
     </>
   );
