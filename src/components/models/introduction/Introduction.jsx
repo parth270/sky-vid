@@ -33,7 +33,7 @@ const Introduction = () => {
               }
             }}
             src="/arrow.svg"
-            className="w-[30px] h-[30px] cursor-pointer"
+            className="w-[30px] translate-y-[-10px] h-[30px] cursor-pointer"
             alt=""
           />
         </div>

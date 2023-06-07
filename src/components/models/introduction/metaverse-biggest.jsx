@@ -32,23 +32,20 @@ const MetaverseBiggest = ({ dropdown }) => {
   return (
     <>
       <Title title="…Metaverse will see biggest growth in enterprise investment" />
-      <div className="w-[100%] overflow-y-auto scroll-hidden h-[92%]  ">
-        <div className="w-[100%] min-h-[100px]  px-[5%] mt-[30px]">
-          <p className="text-[18px] text-[#000] fckin tracking-wide font-bold">
-            Question: By how much does your enterprise plan to increase
-            investment in emerging technologies in the next 12-18 months?
-          </p>
-        </div>
-
+      <div className="w-[100%] flex pr-[5%] overflow-y-auto scroll-hidden h-[92%]  ">
         <iframe
           src="https://flo.uri.sh/visualisation/13699375/embed"
           title="Interactive or visual content"
-          class="px-[5%] flourish-embed-iframe"
+          class="pl-[5%] pr-[30px] flourish-embed-iframe py-[10px]"
           frameborder="0"
           scrolling="no"
-          style={{ width: "100%", height: "600px" }}
+          style={{ width: "100%", height: "400px" }}
           sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
         ></iframe>
+        <p className="text-[18px] mt-[10px] text-[#000] fckin tracking-wide font-bold">
+          Question: By how much does your enterprise plan to increase investment
+          in emerging technologies in the next 12-18 months?
+        </p>
       </div>
     </>
   );

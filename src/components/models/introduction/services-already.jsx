@@ -34,31 +34,31 @@ const ServicesAlready = ({ dropdown }) => {
     <>
       <Title title="Services—already worth $2.45 billion—will grow at an average of 15%" />
       <div className="w-[100%] overflow-y-auto flex justify-between scroll-hidden h-[92%]  px-[5%] ">
-        <div className="w-[45%] shrink-0 h-[600px]">
+        <div className="w-[48%] shrink-0 h-[400px]">
           <p className="text-[22px] text-[#000] fckin tracking-wide font-bold">
             Metaverse services revenues
           </p>
           <iframe
             src="https://flo.uri.sh/visualisation/13699500/embed"
             title="Interactive or visual content"
-            class="flourish-embed-iframe mt-[30px]"
+            class="flourish-embed-iframe mt-[5px]"
             frameborder="0"
             scrolling="no"
-            style={{ width: "100%", height: "500px" }}
+            style={{ width: "100%", height: "360px" }}
             sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
           ></iframe>
         </div>
-        <div className="w-[45%] h-[600px]">
+        <div className="w-[48%] h-[400px]">
           <p className="text-[18px] text-[#000] fckin tracking-wide font-bold">
             Metaverse services total headcount
           </p>
           <iframe
             src="https://flo.uri.sh/visualisation/13699526/embed"
             title="Interactive or visual content"
-            class=" flourish-embed-iframe mt-[30px]"
+            class=" flourish-embed-iframe mt-[5px]"
             frameborder="0"
             scrolling="no"
-            style={{ width: "100%", height: "500px" }}
+            style={{ width: "100%", height: "360px" }}
             sandbox="allow-same-origin allow-forms allow-scripts allow-downloads allow-popups allow-popups-to-escape-sandbox allow-top-navigation-by-user-activation"
           ></iframe>
         </div>
