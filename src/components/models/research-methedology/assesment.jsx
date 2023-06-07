@@ -63,7 +63,7 @@ const Assessment = ({ dropdown, trans }) => {
         trans={trans}
       /> */}
       <div className="w-[100%] min-h-[100px]  px-[2%] mt-[15px]">
-        <CustomizedTables/>
+        <CustomizedTables trans />
       </div>
     </>
   );

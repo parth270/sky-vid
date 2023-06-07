@@ -1,7 +1,19 @@
 import React from "react";
+import { Tween } from "react-gsap";
 
-const Table = () => {
+const Table = ({trans}) => {
   return (
+    <Tween
+      from={{
+        opacity: 0,
+        y: -20,
+      }}
+      to={{
+        opacity: trans ? 1 : 0,
+        y: trans ? 0 : -20,
+      }}
+      duration={0.5}
+    >
     <div className="w-[100%] h-[570px] ">
       <div className="w-[100%] h-[40px] flex">
         <div className="bg-[#F0905A] h-[40px] w-[17%] text-[#fff] flex items-center justify-center text-[13px] font-medium fckin">
@@ -146,6 +158,7 @@ const Table = () => {
         </div>
       </div>
     </div>
+    </Tween>
   );
 };
 
