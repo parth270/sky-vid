@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { setCurr } from "../../../services/Model";
 import AssesmentPage from "./summary";
 import Guides from "./guides";
+import AboutUs from "./about";
 
 const Demographics = () => {
   const [curr, setCurr1] = useState(0);
@@ -46,6 +47,7 @@ const Demographics = () => {
         />
         {curr === 0 && <AssesmentPage trans={trans} />}
         {curr === 1 && <Guides trans={trans} />}
+        {curr === 2 && <AboutUs trans={trans} />}
       </div>
       <div className="w-[100%] h-[80px] flex items-center justify-center rotate-180 cursor-pointer">
         <img
