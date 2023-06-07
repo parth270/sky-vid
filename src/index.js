@@ -19,30 +19,6 @@ const router = createBrowserRouter([
     path: "/",
     element: <HomePage />,
   },
-  {
-    path: "horizon-profiles",
-    element: <HorizonResults />,
-  },
-  {
-    path: "introduction",
-    element: <Introduction />,
-  },
-  {
-    path: "research-methodology",
-    element: <Research />,
-  },
-  {
-    path: "research-profiles",
-    element: <Profiles />,
-  },
-  {
-    path: "demographics",
-    element: <Demographics />,
-  },
-  {
-    path: "authors",
-    element: <Authors />,
-  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
