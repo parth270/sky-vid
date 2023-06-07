@@ -13,10 +13,10 @@ const Author1 = () => {
       </div>
       <div className="w-[75%] h-[100%] px-[30px]">
         <p className="text-[20px] font-medium fckin  mt-[70px] text-[#444]">
-        <span className="font-bold" >  David Cushman</span> is our strategic lead for Metaverse and Web3, aligning
-          closely with his research in Emerging Technology. He is also deeply
-          engaged in research into Employee Experience, and leads our HFS Hot
-          Vendors program.
+          <span className="font-bold"> David Cushman</span> is our strategic
+          lead for Metaverse and Web3, aligning closely with his research in
+          Emerging Technology. He is also deeply engaged in research into
+          Employee Experience, and leads our HFS Hot Vendors program.
         </p>
         <p className="text-[20px] font-medium fckin  mt-[30px] text-[#444]">
           Experienced in start-up, scale-up and large-scale digital
@@ -24,7 +24,7 @@ const Author1 = () => {
           fastest-growing media company, founded and grown digital consultancies
           across Europe and worked with world-class companies as a director in
           digital strategy advisory at a tier-1 services provider.
-        </p>
+        </p>ś
         <p className="text-[20px] font-medium fckin text-[#444] mt-[30px]">
           He is the author of The 10 Principles of Open Business
           (Palgrave-Macmillan, 2014).

@@ -59,30 +59,41 @@ const MetaEnabling = ({ dropdown, trans }) => {
         width={100}
         trans={trans}
       />
-
-      <div className="w-[100%] min-h-[100px]  px-[5%] relative mt-[30px]">
-        <div className="w-[100%] flex justify-between px-[10%]">
-          <img src="/f1.png" className="w-[200px]" alt="" />
-          <img src="/f2.png" className="w-[200px]" alt="" />
-          <img src="/f3.png" className="w-[200px]" alt="" />
+      <Tween
+        from={{
+          opacity: 0,
+          y: -20,
+        }}
+        to={{
+          opacity: trans ? 1 : 0,
+          y: trans ? 0 : -20,
+        }}
+        duration={0.5}
+      >
+        <div className="w-[100%] min-h-[100px]  px-[5%] relative mt-[30px]">
+          <div className="w-[100%] flex justify-between px-[10%]">
+            <img src="/f1.png" className="w-[200px]" alt="" />
+            <img src="/f2.png" className="w-[200px]" alt="" />
+            <img src="/f3.png" className="w-[200px]" alt="" />
+          </div>
+          <div className="w-[100%] flex justify-between px-[20%]">
+            <img src="/l1.png" className="w-[200px]" alt="" />
+            <img src="/l2.png" className="w-[20px]" alt="" />
+            <img src="/l3.png" className="w-[200px]" alt="" />
+          </div>
+          <div className="w-[100%] flex justify-center px-[10%]">
+            <img
+              src="/epi-3.png"
+              className="w-[400px] translate-y-[-1px]"
+              alt=""
+            />
+          </div>
+          <div className="w-[100%] flex justify-between translate-y-[-100px] px-[10%]">
+            <img src="/epi-2.png" className="w-[200px]" alt="" />
+            <img src="/epi-1.png" className="w-[200px]" alt="" />
+          </div>
         </div>
-        <div className="w-[100%] flex justify-between px-[20%]">
-          <img src="/l1.png" className="w-[200px]" alt="" />
-          <img src="/l2.png" className="w-[20px]" alt="" />
-          <img src="/l3.png" className="w-[200px]" alt="" />
-        </div>
-        <div className="w-[100%] flex justify-center px-[10%]">
-          <img
-            src="/epi-3.png"
-            className="w-[400px] translate-y-[-1px]"
-            alt=""
-          />
-        </div>
-        <div className="w-[100%] flex justify-between translate-y-[-100px] px-[10%]">
-          <img src="/epi-2.png" className="w-[200px]" alt="" />
-          <img src="/epi-1.png" className="w-[200px]" alt="" />
-        </div>
-      </div>
+      </Tween>
     </>
   );
 };

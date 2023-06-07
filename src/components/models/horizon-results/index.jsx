@@ -49,13 +49,13 @@ const HorizonList = () => {
         <img
           src="/arrow.svg"
           onClick={() => {
-            if (curr !== 4) {
-              setTrans(false);
-              setTimeout(() => {
-                setCurr1(curr + 1);
-                setTrans(true);
-              }, 600);
-            }
+            // if (curr !== 4) {
+            //   setTrans(false);
+            //   setTimeout(() => {
+            //     setCurr1(curr + 1);
+            //     setTrans(true);
+            //   }, 600);
+            // }
           }}
           className="w-[40px] h-[40px] movingElement "
           alt=""
