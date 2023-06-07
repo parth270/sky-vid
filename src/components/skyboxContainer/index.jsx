@@ -27,4 +27,4 @@ const SkyboxContainer = ({ children }) => {
     );
   };
 
-export default SkyboxContainer;
+export default React.memo(SkyboxContainer);

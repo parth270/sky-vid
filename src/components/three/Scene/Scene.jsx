@@ -58,6 +58,7 @@ const Clouds = () => {
 
 const Scene = ({ randoms }) => {
   const curr1 = useSelector((state) => state.three.curr1);
+  const curr = useSelector((state) => state.model.curr);
   const allContent = useSelector((state) => state.model.allContent);
   // const state1 = useSelector((state) => state.model);
   const dispatch = useDispatch();
@@ -72,7 +73,7 @@ const Scene = ({ randoms }) => {
         // args={[pages[0].back]}
         args={["#fff"]}
       />
-      <OrbitControls maxPolarAngle={Math.PI / 2} target={[0, 5, 0]} />
+      <OrbitControls maxPolarAngle={Math.PI / 2} enabled={curr===null} target={[0, 5, 0]} />
       <Effects />
       <ambientLight intensity={1.5} />
       <Rig>
@@ -80,7 +81,7 @@ const Scene = ({ randoms }) => {
         <SkyBox src="/ss.jpeg" pos={[0, 0, 0]} />
         <Model position={[0, -3.5, 0]} scale={[2, 2, 2]} />
         <Clouds />
-        <Pops/>
+        <Pops />
         {/* <SkyCover /> */}
         {/* <Background /> */}
         <Sun />
