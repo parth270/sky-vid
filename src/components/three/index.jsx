@@ -16,7 +16,8 @@ const CanvasContainer = ({ curr1 }) => {
   return (
     <Canvas
       camera={{
-        position: [-20, 5, 0],
+        // position: [-20, 5, 0],
+        position: [-16.908693723653315, 5, 10.681576501607207],
         fov: 25,
       }}
       dpr={devicePixelRatio}
