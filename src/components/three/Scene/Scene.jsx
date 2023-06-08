@@ -100,10 +100,10 @@ const Scene = ({ randoms }) => {
   });
   const [chek, setChek] = useState(false);
 
-  // useFrame(() => {
-  //   console.log(camera.rotation.y * THREE.MathUtils.RAD2DEG);
-  //   console.log([camera.position.x, camera.position.y, camera.position.z]);
-  // });
+  useFrame(() => {
+    console.log(camera.rotation.y * THREE.MathUtils.RAD2DEG);
+    console.log([camera.position.x, camera.position.y, camera.position.z]);
+  });
 
   useEffect(() => {
     if (curr !== null) {
@@ -144,14 +144,14 @@ const Scene = ({ randoms }) => {
     } else {
       if (chek) {
         gsap.to(camera.rotation, {
-          y: -90 * THREE.MathUtils.DEG2RAD,
+          y: -57.71844153327286* THREE.MathUtils.DEG2RAD,
           duration: 0.8,
           ease: Power2.easeInOut,
         });
         gsap.to(camera.position, {
-          x: -20,
+          x: -16.908693723653315,
           y: 5,
-          z: 1.2246467991473533e-15,
+          z:10.681576501607207,
           ease: Power2.easeInOut,
           onComplete: () => {
             setTimeout(() => {
