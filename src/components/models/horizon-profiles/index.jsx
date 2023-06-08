@@ -19,6 +19,14 @@ const HorizonProfiles = () => {
       <div className="h-[42px] rounded-[30px] bg-[#f17238]  px-[30px] min-w-[300px] flex items-center justify-center text-[20px] font-medium capitalize text-[#fff] ">
         <span className="translate-y-[1px]">HorizonProfiles</span>
       </div>
+      <img
+        src="/cross.svg"
+        className="absolute top-[100px] right-[100px] w-[24px] h-[24px] cursor-pointer z-50"
+        alt=""
+        onClick={() => {
+          dispatch(setCurr(null));
+        }}
+      />
       <Profile1
         change={(e, src) => {
           setTrans(false);
@@ -49,7 +57,7 @@ const HorizonProfiles = () => {
           });
         }}
       />
-      {curr !==null && (
+      {curr !== null && (
         <Profile
           id={curr}
           imgClass="h-[100px] max-w-[200px] object-contain mb-[10px]"
