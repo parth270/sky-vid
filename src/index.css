@@ -42,7 +42,15 @@ code {
 .scroll-bar-cool-1::-webkit-scrollbar-thumb {
   background-color: #000;
   border-radius: 12px;
+}
+.scroll-bar-cool-2::-webkit-scrollbar {
+  width:5px;
+  background-color: transparent;
+}
 
+.scroll-bar-cool-2::-webkit-scrollbar-thumb {
+  background-color: #F0905A;
+  border-radius: 12px;
 }
 
 @keyframes moveUpAndDown {

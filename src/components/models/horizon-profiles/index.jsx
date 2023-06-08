@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setCurr } from "../../../services/Model";
 import { Profile1, Profile2, Profile3 } from "./profiles";
+import Profile from "./profile";
 const HorizonProfiles = () => {
-  const [curr, setCurr1] = useState(0);
+  const [curr, setCurr1] = useState(null);
   const [trans, setTrans] = useState(true);
+  const [src, setSrc] = useState("");
   const dispatch = useDispatch();
 
   return (
@@ -18,45 +20,115 @@ const HorizonProfiles = () => {
         <span className="translate-y-[1px]">HorizonProfiles</span>
       </div>
       <Profile1
-        change={(e) => {
+        change={(e, src) => {
           setTrans(false);
           setTimeout(() => {
-            setCurr(e);
+            setCurr1(e);
+            setSrc(src);
             setTrans(true);
           });
         }}
       />
       <Profile2
-        change={(e) => {
+        change={(e, src) => {
           setTrans(false);
           setTimeout(() => {
-            setCurr(e);
+            setCurr1(e);
+            setSrc(src);
             setTrans(true);
           });
         }}
       />
       <Profile3
-        change={(e) => {
+        change={(e, src) => {
           setTrans(false);
           setTimeout(() => {
-            setCurr(e);
+            setCurr1(e);
+            setSrc(src);
             setTrans(true);
           });
         }}
       />
-      {/* <div className="pb-[30px] pt-[20px] overflow-hidden  scroll-hidden w-[1300px] h-[550px] shrink-0 bg-[#ffffff90] backdrop-blur-lg mt-[20px] mb-[10px] rounded-[20px]">
-        <div className="w-[100%] flex items-center h-[40px] justify-center absolute top-0 ">
-         
-        </div>
-        <img
-          src="/cross.svg"
-          className="absolute top-[20px] right-[40px] w-[24px] h-[24px] cursor-pointer z-50"
-          alt=""
-          onClick={() => {
-            dispatch(setCurr(null));
+      {curr !==null && (
+        <Profile
+          id={curr}
+          imgClass="h-[100px] max-w-[200px] object-contain mb-[10px]"
+          trans={trans}
+          src={src}
+          close={() => {
+            setTrans(false);
+            setTimeout(() => {
+              setCurr1(null);
+              setSrc("");
+              setTrans(true);
+            });
           }}
         />
-      </div> */}
+      )}
+      {/* {curr === 1 && (
+        <Profile
+          id={curr}
+          imgClass="w-[220px]"
+          trans={trans}
+          src={src}
+          close={() => {
+            setTrans(false);
+            setTimeout(() => {
+              setCurr1(null);
+              setSrc("");
+              setTrans(true);
+            });
+          }}
+        />
+      )}
+      {curr === 2 && (
+        <Profile
+        id={curr}
+          imgClass="w-[180px]"
+          trans={trans}
+          src={src}
+          close={() => {
+            setTrans(false);
+            setTimeout(() => {
+              setCurr1(null);
+              setSrc("");
+              setTrans(true);
+            });
+          }}
+        />
+      )}
+      {curr === 3 && (
+        <Profile
+        id={curr}
+          imgClass="w-[180px]"
+          trans={trans}
+          src={src}
+          close={() => {
+            setTrans(false);
+            setTimeout(() => {
+              setCurr1(null);
+              setSrc("");
+              setTrans(true);
+            });
+          }}
+        />
+      )}
+      {curr === 4 && (
+        <Profile
+        id={curr}
+          imgClass="w-[180px]"
+          trans={trans}
+          src={src}
+          close={() => {
+            setTrans(false);
+            setTimeout(() => {
+              setCurr1(null);
+              setSrc("");
+              setTrans(true);
+            });
+          }}
+        />
+      )} */}
     </div>
   );
 };
