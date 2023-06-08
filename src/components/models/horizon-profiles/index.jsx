@@ -69,7 +69,7 @@ const HorizonProfiles = () => {
               setCurr1(null);
               setSrc("");
               setTrans(true);
-            });
+            }, 600);
           }}
         />
       )}
