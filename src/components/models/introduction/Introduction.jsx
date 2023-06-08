@@ -60,7 +60,7 @@ const Introduction = () => {
         {curr === 7 && <MetaverseBiggest trans={trans} />}
         {curr === 8 && <ServicesAlready trans={trans} />}
       </div>
-      <div className="w-[100%] h-[100px] absolute bottom-0 z-50 flex items-center justify-center rotate-180 cursor-pointer">
+      <div className="w-[100%] h-[70px] absolute bottom-0 z-50 flex items-center justify-center rotate-180 cursor-pointer">
         <img
           src="/arrow.svg"
           onClick={() => {
