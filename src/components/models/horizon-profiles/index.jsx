@@ -27,36 +27,39 @@ const HorizonProfiles = () => {
           dispatch(setCurr(null));
         }}
       />
-      <Profile1
-        change={(e, src) => {
-          setTrans(false);
-          setTimeout(() => {
-            setCurr1(e);
-            setSrc(src);
-            setTrans(true);
-          });
-        }}
-      />
-      <Profile2
-        change={(e, src) => {
-          setTrans(false);
-          setTimeout(() => {
-            setCurr1(e);
-            setSrc(src);
-            setTrans(true);
-          });
-        }}
-      />
-      <Profile3
-        change={(e, src) => {
-          setTrans(false);
-          setTimeout(() => {
-            setCurr1(e);
-            setSrc(src);
-            setTrans(true);
-          });
-        }}
-      />
+      <div className="w-[100%] h-[100%] flex items-center justify-center flex-col" >
+        <Profile1
+          change={(e, src) => {
+            setTrans(false);
+            setTimeout(() => {
+              setCurr1(e);
+              setSrc(src);
+              setTrans(true);
+            });
+          }}
+        />
+        <Profile2
+          change={(e, src) => {
+            setTrans(false);
+            setTimeout(() => {
+              setCurr1(e);
+              setSrc(src);
+              setTrans(true);
+            });
+          }}
+        />
+        <Profile3
+          change={(e, src) => {
+            setTrans(false);
+            setTimeout(() => {
+              setCurr1(e);
+              setSrc(src);
+              setTrans(true);
+            });
+          }}
+        />
+      </div>
+
       {curr !== null && (
         <Profile
           id={curr}

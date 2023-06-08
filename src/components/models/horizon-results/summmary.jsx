@@ -70,7 +70,7 @@ const Assessment = ({ dropdown, trans }) => {
         }}
         duration={0.2}
       >
-        <div className="w-[100%] h-[100%] flex justify-center">
+        <div className="w-[100%] h-[100%] flex justify-center overflow-hidden">
           <div className="w-[48%] px-[5%] h-[570px] ">
             <div className="w-[100%] h-[40px] flex">
               <div className="bg-[#F0905A] h-[40px] w-[36%] text-[#fff] flex items-center justify-center text-[13px] font-medium fckin">
