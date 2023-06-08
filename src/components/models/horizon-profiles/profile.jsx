@@ -94,12 +94,41 @@ const Categories = ({ selected, change, trans }) => {
   );
 };
 
-const Profile = ({ src, id, trans, close, imgClass }) => {
+const Profile = ({
+  src,
+  id,
+  trans,
+  close,
+  imgClass,
+  curr,
+  setCurr,
+  setCurr1,
+}) => {
   const [selected, setSelected] = useState(0);
   console.log(data);
   return (
-    <div className="w-[100%] h-[100vh] absolute z-50 flex items-center justify-center top-0 ">
-      <div className=" flex flex-col pb-[30px] px-[5%] pt-[20px] overflow-hidden  scroll-hidden w-[1300px] h-[620px] translate-y-[70px] shrink-0 bg-[#ffffff90] backdrop-blur-lg mt-[20px] mb-[10px] rounded-[20px]">
+    <div className="w-[100%] h-[100vh] pt-[150px] absolute z-50 flex items-center justify-center top-0 ">
+      <div className="w-[100%] h-[100px] absolute bottom-0 z-50 flex items-center justify-center rotate-180 cursor-pointer">
+        <img
+          src="/arrow.svg"
+          onClick={() => {
+            setCurr(curr);
+          }}
+          className="w-[40px] h-[40px] movingElement "
+          alt=""
+        />
+      </div>
+      <div className="w-[100%] h-[40px] absolute top-0 z-50 flex items-center justify-center cursor-pointer">
+        <img
+          src="/arrow.svg"
+          onClick={() => {
+            setCurr1(curr);
+          }}
+          className="w-[40px] h-[40px]"
+          alt=""
+        />
+      </div>
+      <div className=" flex flex-col pb-[30px] px-[5%] pt-[20px] overflow-hidden  scroll-hidden w-[100%] h-[100%] bg-[#ffffff90] backdrop-blur-lg rounded-[20px]">
         <img
           src="/cross.svg"
           className="absolute top-[20px] right-[40px] w-[24px] h-[24px] cursor-pointer z-50"

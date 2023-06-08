@@ -100,10 +100,10 @@ const Scene = ({ randoms }) => {
   });
   const [chek, setChek] = useState(false);
 
-  useFrame(() => {
-    console.log(camera.rotation.y * THREE.MathUtils.RAD2DEG);
-    console.log([camera.position.x, camera.position.y, camera.position.z]);
-  });
+  // useFrame(() => {
+  //   console.log(camera.rotation.y * THREE.MathUtils.RAD2DEG);
+  //   console.log([camera.position.x, camera.position.y, camera.position.z]);
+  // });
 
   useEffect(() => {
     if (curr !== null) {

@@ -8,6 +8,28 @@ const HorizonProfiles = () => {
   const [trans, setTrans] = useState(true);
   const [src, setSrc] = useState("");
   const dispatch = useDispatch();
+  const srces = [
+    "/profiles/accenture.png",
+    "/profiles/kmpg.png",
+    "/profiles/EY.png",
+    "/profiles/public-sapi.png",
+    "/profiles/IBM.png",
+    "/profiles/tech-mahindra.png",
+    "/profiles/infoysis.png",
+    "/profiles/wipro.png",
+    "/profiles/hexaware.png",
+    "/profiles/capgemini.png",
+    "/profiles/pwx.png",
+    "/profiles/coforge.png",
+    "/profiles/rd.png",
+    "/profiles/cognizant.png",
+    "/profiles/tcs.png",
+    "/profiles/foundever.png",
+    "/profiles/ust.png",
+    "/profiles/ltimindtree.png",
+  ];
+
+  const ids = [0, 1, 2, 3, 4, 5, 6, 7, 14, 8, 11, 9, 12, 10, 13, 15, 17, 16];
 
   return (
     <div
@@ -27,7 +49,7 @@ const HorizonProfiles = () => {
           dispatch(setCurr(null));
         }}
       />
-      <div className="w-[100%] h-[100%] flex items-center justify-center flex-col" >
+      <div className="w-[100%] h-[100%] flex items-center justify-center flex-col">
         <Profile1
           change={(e, src) => {
             setTrans(false);
@@ -63,9 +85,33 @@ const HorizonProfiles = () => {
       {curr !== null && (
         <Profile
           id={curr}
+          curr={ids.indexOf(curr)}
           imgClass="h-[100px] max-w-[200px] object-contain mb-[10px]"
           trans={trans}
           src={src}
+          setCurr={(e) => {
+            console.log(e);
+            if (Number(e) !== 17) {
+              setTrans(false);
+              setTimeout(() => {
+                setCurr1(ids[e + 1]);
+                setSrc(srces[e + 1]);
+                setTrans(true);
+              }, 600);
+            }
+          }}
+          setCurr1={(e) => {
+            console.log(e);
+
+            if (Number(e) !== 0) {
+              setTrans(false);
+              setTimeout(() => {
+                setCurr1(ids[e - 1]);
+                setSrc(srces[e - 1]);
+                setTrans(true);
+              }, 600);
+            }
+          }}
           close={() => {
             setTrans(false);
             setTimeout(() => {
