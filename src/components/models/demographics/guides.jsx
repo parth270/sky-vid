@@ -12,7 +12,7 @@ const Title = ({ title, width, trans }) => {
         opacity: trans ? 1 : 0,
         y: trans ? 0 : -20,
       }}
-      duration={0.5}
+      duration={0.2}
     >
       <h1 className="w-[100%]  px-[5%] min-h-[70px] text-[38px] fckin text-[#535E6F]">
         {title}
@@ -39,7 +39,7 @@ const Guides = ({ dropdown, trans }) => {
             opacity: trans ? 1 : 0,
             y: trans ? 0 : -20,
           }}
-          duration={0.5}
+          duration={0.2}
         >
           <p className="text-[18px] font-bold fckin">
             This report may contain terms, abbreviations, and concepts you may
@@ -57,7 +57,7 @@ const Guides = ({ dropdown, trans }) => {
             opacity: trans ? 1 : 0,
             y: trans ? 0 : -20,
           }}
-          duration={0.5}
+          duration={0.2}
         >
           <div className="w-[100%] my-[20px] h-[300px] flex justify-center">
             <img src="/data.png" alt="" className="object-contain" />
@@ -72,7 +72,7 @@ const Guides = ({ dropdown, trans }) => {
             opacity: trans ? 1 : 0,
             y: trans ? 0 : -20,
           }}
-          duration={0.5}
+          duration={0.2}
         >
           <p className="text-[18px] font-bold fckin">
             Click images of the reports to open links. For more, search

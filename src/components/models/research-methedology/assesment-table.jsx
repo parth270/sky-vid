@@ -12,7 +12,7 @@ const Table = ({trans}) => {
         opacity: trans ? 1 : 0,
         y: trans ? 0 : -20,
       }}
-      duration={0.5}
+      duration={0.2}
     >
     <div className="w-[100%] h-[570px] ">
       <div className="w-[100%] h-[40px] flex">

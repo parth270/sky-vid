@@ -16,7 +16,7 @@ const ListChild = ({ children, color, trans }) => {
         opacity: trans ? 1 : 0,
         y: trans ? 0 : -20,
       }}
-      duration={0.5}
+      duration={0.2}
     >
       <li
         className="text-[#000] fckin leading-[16px] font-medium mb-[10px] "
@@ -45,7 +45,7 @@ const Title = ({ title, width, trans }) => {
         opacity: trans ? 1 : 0,
         y: trans ? 0 : -20,
       }}
-      duration={0.5}
+      duration={0.2}
     >
       <h1 className="w-[100%]  px-[5%] h-[70px] text-[40px] fckin text-[#535E6F]">
         {title}
@@ -107,7 +107,7 @@ const TheMetaverse = ({ trans }) => {
               opacity: trans ? 1 : 0,
               y: trans ? 0 : -20,
             }}
-            duration={0.5}
+            duration={0.2}
           >
             <img src="/aa.svg" className="absolute w-[100%] " alt="" />
           </Tween>

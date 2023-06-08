@@ -12,7 +12,7 @@ const Title = ({ title, width, trans }) => {
         opacity: trans ? 1 : 0,
         y: trans ? 0 : -20,
       }}
-      duration={0.5}
+      duration={0.2}
     >
       <h1 className="w-[100%]  px-[5%] h-[70px] text-[40px] fckin text-[#535E6F]">
         {title}
@@ -39,7 +39,7 @@ const Pop1 = ({ trans }) => {
             opacity: trans ? 1 : 0,
             y: trans ? 0 : -20,
           }}
-          duration={0.5}
+          duration={0.2}
         >
           <p className="font-medium fckin  text-[18px] text-[#000]">
             The term “metaverse” is regularly used as marketing shorthand for
@@ -65,7 +65,7 @@ const Pop1 = ({ trans }) => {
               opacity: trans ? 1 : 0,
               y: trans ? 0 : -20,
             }}
-            duration={0.5}
+            duration={0.2}
           >
             <li className="text-[#000] fckin font-medium mb-[10px]">
               <div>
@@ -102,7 +102,7 @@ const Pop1 = ({ trans }) => {
               opacity: trans ? 1 : 0,
               y: trans ? 0 : -20,
             }}
-            duration={0.5}
+            duration={0.2}
           >
             <li className="text-[#000] fckin font-medium mb-[10px]">
               This inaugural HFS Horizons report for metaverse services examines
@@ -120,7 +120,7 @@ const Pop1 = ({ trans }) => {
               opacity: trans ? 1 : 0,
               y: trans ? 0 : -20,
             }}
-            duration={0.5}
+            duration={0.2}
           >
             <li className="text-[#000] fckin font-medium mb-[10px]">
               We assessed the service providers across a defined series of
@@ -142,7 +142,7 @@ const Pop1 = ({ trans }) => {
               opacity: trans ? 1 : 0,
               y: trans ? 0 : -20,
             }}
-            duration={0.5}
+            duration={0.2}
           >
             <li className="text-[#000] fckin font-medium mb-[10px]">
               This report also includes detailed profiles of each service

@@ -25,7 +25,7 @@ const Title = ({ title, width,trans }) => {
         opacity: trans ? 1 : 0,
         y: trans ? 0 : -20,
       }}
-      duration={0.5}
+      duration={0.2}
     >
       <h1 className="w-[100%]  px-[5%] min-h-[70px] text-[40px] fckin text-[#535E6F]">
         {title}
@@ -59,7 +59,7 @@ const MetaverseBiggest = ({ dropdown, trans }) => {
             opacity: trans ? 1 : 0,
             y: trans ? 0 : -20,
           }}
-          duration={0.5}
+          duration={0.2}
         >
           <iframe
             src="https://flo.uri.sh/visualisation/13699375/embed"
@@ -80,7 +80,7 @@ const MetaverseBiggest = ({ dropdown, trans }) => {
             opacity: trans ? 1 : 0,
             y: trans ? 0 : -20,
           }}
-          duration={0.5}
+          duration={0.2}
         >
           <p className="text-[18px] mt-[10px] text-[#000] fckin tracking-wide font-bold">
             Question: By how much does your enterprise plan to increase

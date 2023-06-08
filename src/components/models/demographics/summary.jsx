@@ -13,7 +13,7 @@ const Title = ({ title, width, trans }) => {
         opacity: trans ? 1 : 0,
         y: trans ? 0 : -20,
       }}
-      duration={0.5}
+      duration={0.2}
     >
       <h1 className="w-[100%]  px-[5%] h-[70px] text-[40px] fckin text-[#535E6F]">
         {title}
@@ -215,7 +215,7 @@ const AssesmentPage = ({ dropdown, trans }) => {
             opacity: trans ? 1 : 0,
             y: trans ? 0 : -20,
           }}
-          duration={0.5}
+          duration={0.2}
         >
           <h2 className="text-[19px] font-bold fckin tracking-wide">
             Our cohort of metaverse services providers provided customer
@@ -232,7 +232,7 @@ const AssesmentPage = ({ dropdown, trans }) => {
             opacity: trans ? 1 : 0,
             y: trans ? 0 : -20,
           }}
-          duration={0.5}
+          duration={0.2}
         >
           <div className="w-[100%] flex h-[480px] border-[1px] border-[#000] justify-between mt-[8px] mb-[70px]">
             <div className="w-[33.33%] h-[450px]">

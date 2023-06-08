@@ -13,7 +13,7 @@ const Title = ({ title, width, trans }) => {
         opacity: trans ? 1 : 0,
         y: trans ? 0 : -20,
       }}
-      duration={0.5}
+      duration={0.2}
     >
       <h1 className="w-[100%]  px-[5%] h-[70px] text-[40px] fckin text-[#535E6F]">
         {title}
@@ -41,7 +41,7 @@ const ListChild = ({ children, trans }) => {
         opacity: trans ? 1 : 0,
         y: trans ? 0 : -20,
       }}
-      duration={0.5}
+      duration={0.2}
     >
       <li className="text-[#000] fckin font-medium mb-[10px]">{children}</li>
     </Tween>

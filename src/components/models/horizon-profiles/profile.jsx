@@ -14,7 +14,7 @@ const Categories = ({ selected, change, trans }) => {
         opacity: trans ? 1 : 0,
         y: trans ? 0 : -20,
       }}
-      duration={0.5}
+      duration={0.2}
     >
       <div className="w-[100%] shrink-0 flex items-center justify-between h-[30px] mt-[30px]">
         <div
@@ -117,7 +117,7 @@ const Profile = ({ src, id, trans, close, imgClass }) => {
             opacity: trans ? 1 : 0,
             y: trans ? 0 : -20,
           }}
-          duration={0.5}
+          duration={0.2}
         >
           <img src={src} className={imgClass} alt="" />
         </Tween>
@@ -130,7 +130,7 @@ const Profile = ({ src, id, trans, close, imgClass }) => {
             opacity: trans ? 1 : 0,
             y: trans ? 0 : -20,
           }}
-          duration={0.5}
+          duration={0.2}
         >
           <p className="text-[#535E6F] text-[18px] font-medium fckin">
             {data[id].detail}
@@ -150,7 +150,7 @@ const Profile = ({ src, id, trans, close, imgClass }) => {
                     opacity: trans ? 1 : 0,
                     y: trans ? 0 : -20,
                   }}
-                  duration={0.5}
+                  duration={0.2}
                   key={i}
                 >
                   <div className="flex mb-[10px] text-[#000] font-medium tracking-wide">
@@ -175,7 +175,7 @@ const Profile = ({ src, id, trans, close, imgClass }) => {
                     opacity: trans ? 1 : 0,
                     y: trans ? 0 : -20,
                   }}
-                  duration={0.5}
+                  duration={0.2}
                   key={i}
                 >
                   <div className="flex mb-[10px] text-[#000] font-medium tracking-wide">
@@ -200,7 +200,7 @@ const Profile = ({ src, id, trans, close, imgClass }) => {
                     opacity: trans ? 1 : 0,
                     y: trans ? 0 : -20,
                   }}
-                  duration={0.5}
+                  duration={0.2}
                   key={i}
                 >
                   <div className="flex mb-[10px] text-[#000] font-medium tracking-wide">
@@ -225,7 +225,7 @@ const Profile = ({ src, id, trans, close, imgClass }) => {
                     opacity: trans ? 1 : 0,
                     y: trans ? 0 : -20,
                   }}
-                  duration={0.5}
+                  duration={0.2}
                   key={i}
                 >
                   <div className="flex mb-[10px] text-[#000] font-medium tracking-wide">
@@ -250,7 +250,7 @@ const Profile = ({ src, id, trans, close, imgClass }) => {
                     opacity: trans ? 1 : 0,
                     y: trans ? 0 : -20,
                   }}
-                  duration={0.5}
+                  duration={0.2}
                   key={i}
                 >
                   <div className="flex mb-[10px] text-[#000] font-medium tracking-wide">
@@ -275,7 +275,7 @@ const Profile = ({ src, id, trans, close, imgClass }) => {
                     opacity: trans ? 1 : 0,
                     y: trans ? 0 : -20,
                   }}
-                  duration={0.5}
+                  duration={0.2}
                   key={i}
                 >
                   <div className="flex mb-[10px] text-[#000] font-medium tracking-wide">

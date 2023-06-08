@@ -14,7 +14,7 @@ const AboutUs = ({ dropdown, trans }) => {
             opacity: trans ? 1 : 0,
             y: trans ? 0 : -20,
           }}
-          duration={0.5}
+          duration={0.2}
         >
           <p className="text-[40px] font-bold fckin">
             Insight. Inspiration. Impact.
@@ -29,7 +29,7 @@ const AboutUs = ({ dropdown, trans }) => {
             opacity: trans ? 1 : 0,
             y: trans ? 0 : -20,
           }}
-          duration={0.5}
+          duration={0.2}
         >
           <p className="text-[18px] font-bold fckin tracking-wider mt-[20px]">
             HFS is a unique analyst organization that combines deep visionary
@@ -49,7 +49,7 @@ const AboutUs = ({ dropdown, trans }) => {
             opacity: trans ? 1 : 0,
             y: trans ? 0 : -20,
           }}
-          duration={0.5}
+          duration={0.2}
         >
           <p className="text-[18px] font-bold fckin tracking-wider mt-[5px] ">
             HFSResearch introduced the world to terms such as “RPA” (Robotic
@@ -71,7 +71,7 @@ const AboutUs = ({ dropdown, trans }) => {
               opacity: trans ? 1 : 0,
               y: trans ? 0 : -20,
             }}
-            duration={0.5}
+            duration={0.2}
           >
             <div className="bg-[#535E6F] text-[#fff] text-[14px] tracking-wide fckin px-[20px] flex items-center w-[300px] h-[70px] rounded-[50px]">
               <img src="/linked.png" className="w-[40px] mr-[10px]" alt="" />
@@ -94,7 +94,7 @@ const AboutUs = ({ dropdown, trans }) => {
               opacity: trans ? 1 : 0,
               y: trans ? 0 : -20,
             }}
-            duration={0.5}
+            duration={0.2}
           >
             <div className="bg-[#535E6F] text-[#fff] text-[14px] tracking-wide fckin px-[20px] flex items-center w-[300px] h-[70px] rounded-[50px]">
               <img src="/message.png" className="w-[40px] mr-[10px]" alt="" />
@@ -117,7 +117,7 @@ const AboutUs = ({ dropdown, trans }) => {
               opacity: trans ? 1 : 0,
               y: trans ? 0 : -20,
             }}
-            duration={0.5}
+            duration={0.2}
           >
             <div className="bg-[#535E6F] text-[#fff] text-[14px] tracking-wide fckin px-[20px] flex items-center w-[300px] h-[70px] rounded-[50px]">
               <img src="/inter.png" className="w-[40px] mr-[10px]" alt="" />

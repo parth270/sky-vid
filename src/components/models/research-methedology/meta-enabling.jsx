@@ -12,7 +12,7 @@ const Title = ({ title, width, trans }) => {
         opacity: trans ? 1 : 0,
         y: trans ? 0 : -20,
       }}
-      duration={0.5}
+      duration={0.2}
     >
       <h1 className="w-[100%]  px-[5%] h-[70px] text-[40px] fckin text-[#535E6F]">
         {title}
@@ -40,7 +40,7 @@ const ListChild = ({ children, trans }) => {
         opacity: trans ? 1 : 0,
         y: trans ? 0 : -20,
       }}
-      duration={0.5}
+      duration={0.2}
     >
       <li className="text-[#000] fckin font-medium mb-[10px]">{children}</li>
     </Tween>
@@ -68,7 +68,7 @@ const MetaEnabling = ({ dropdown, trans }) => {
           opacity: trans ? 1 : 0,
           y: trans ? 0 : -20,
         }}
-        duration={0.5}
+        duration={0.2}
       >
         <div className="w-[100%] min-h-[100px]  px-[5%] relative mt-[30px]">
           <div className="w-[100%] flex justify-between px-[10%]">

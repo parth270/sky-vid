@@ -26,7 +26,7 @@ const Title = ({ title, width, trans }) => {
         opacity: trans ? 1 : 0,
         y: trans ? 0 : -20,
       }}
-      duration={0.5}
+      duration={0.2}
     >
       <h1 className="w-[100%]  px-[5%] min-h-[70px] text-[38px] fckin text-[#535E6F]">
         {title}
@@ -57,7 +57,7 @@ const CeoResponsibility = ({ dropdown, trans }) => {
             opacity: trans ? 1 : 0,
             y: trans ? 0 : -20,
           }}
-          duration={0.5}
+          duration={0.2}
         >
           <iframe
             src="https://flo.uri.sh/visualisation/13698083/embed"
@@ -79,7 +79,7 @@ const CeoResponsibility = ({ dropdown, trans }) => {
               opacity: trans ? 1 : 0,
               y: trans ? 0 : -20,
             }}
-            duration={0.5}
+            duration={0.2}
           >
             <div className="w-[100%] min-h-[80px]  px-[5%] mt-[5px]">
               <p className="text-[15px] text-[#000] fckin tracking-wide font-bold">
@@ -100,7 +100,7 @@ const CeoResponsibility = ({ dropdown, trans }) => {
               opacity: trans ? 1 : 0,
               y: trans ? 0 : -20,
             }}
-            duration={0.5}
+            duration={0.2}
           >
             <div className="w-[90%] mx-[5%] min-h-[100px] py-[30px] bg-[#f2f2f2] mb-[30px] px-[5%] mt-[0px]">
               <p className="text-[15px] text-[#000] fckin tracking-wide font-medium">
