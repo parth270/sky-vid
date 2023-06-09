@@ -99,6 +99,7 @@ const Scene = ({ randoms }) => {
     showed: true,
   });
   const [chek, setChek] = useState(false);
+  const [cirr, setCirr] = useState(null);
 
   // useFrame(() => {
   //   console.log(camera.rotation.y);
@@ -107,6 +108,7 @@ const Scene = ({ randoms }) => {
 
   useEffect(() => {
     if (curr !== null) {
+      setCirr(curr);
       let deg = -46;
       let pos = [-20, 5, 1.2246467991473533e-15];
       if (curr === 0) {
@@ -143,18 +145,20 @@ const Scene = ({ randoms }) => {
       });
     } else {
       if (chek) {
-        console.log(camera.rotation.y);
+        console.log(cirr);
         let rota = -57.71844153327286 * THREE.MathUtils.DEG2RAD;
         let anotherRota = -0.9796786692796922;
         let Pos1 = [-16.908693723653315, 5, 10.681576501607207];
         let Pos2 = [
           -16.606407509994337, 5.000000000000001, -11.145726966510669,
         ];
-        if (
-          camera.rotation.y === 0.785398 ||
-          camera.rotation.y === -0.750492 ||
-          camera.rotation.y === -0.05236
-        ) {
+        // if (
+        //   camera.rotation.y === 0.785398 ||
+        //   camera.rotation.y === -0.750492 ||
+        //   camera.rotation.y === -0.05236 ||
+        //   camera.rotation.y === 0.785398
+        // ) {
+        if (cirr === 3 || cirr === 4 || cirr === 5) {
           gsap.to(camera.rotation, {
             // y: -57.71844153327286* THREE.MathUtils.DEG2RAD,
             y: anotherRota,
@@ -171,6 +175,7 @@ const Scene = ({ randoms }) => {
             onComplete: () => {
               setTimeout(() => {
                 setShow(true);
+                setCirr(null);
               }, 200);
             },
           });
@@ -191,6 +196,7 @@ const Scene = ({ randoms }) => {
             onComplete: () => {
               setTimeout(() => {
                 setShow(true);
+                setCirr(null);
               }, 200);
             },
           });
@@ -200,6 +206,7 @@ const Scene = ({ randoms }) => {
       }
     }
   }, [curr]);
+
   return (
     <>
       <color

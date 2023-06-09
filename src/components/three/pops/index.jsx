@@ -34,11 +34,11 @@ const Frame = ({ pos, rota, text, route, i }) => {
           // }
           dispatch(setCurr(i));
         }}
-        className="w-[350px] flex items-end duration-300 cursor-pointer  h-[400px]"
+        className="w-[350px] flex items-end duration-300 cursor-pointer  h-[50vh]"
       >
         <div
           className={` ${
-            curr === i && "scale-50 translate-y-[-120px]"
+            curr === i && "scale-50 translate-y-[-12vh]"
           } duration-300 flex w-[100%] h-[400px]  items-end`}
         >
           <span className="text-[80px] font-medium leading-[65px] text-[#505e71] mr-[20px]">
