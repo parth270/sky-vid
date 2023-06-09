@@ -93,7 +93,7 @@ export const Profile2 = ({ change, doIt }) => {
           onClick={() => {
             doIt();
           }}
-          className="bg-[#535E6F] h-[30px] w-[320px] font-medium fckin text-[#fff] items-center justify-center flex rounded-[30px]"
+          className="bg-[#535E6F] cursor-pointer h-[30px] w-[320px] font-medium fckin text-[#fff] items-center justify-center flex rounded-[30px]"
         >
           Horizon 2 - Enterprise Innovators
         </div>
@@ -169,7 +169,7 @@ export const Profile3 = ({ change, doIt }) => {
           onClick={() => {
             doIt();
           }}
-          className="bg-[#535E6F] h-[30px] w-[280px] font-medium fckin text-[#fff] items-center justify-center flex rounded-[30px]"
+          className="bg-[#535E6F] cursor-pointer h-[30px] w-[280px] font-medium fckin text-[#fff] items-center justify-center flex rounded-[30px]"
         >
           Horizon 1 - Disruptors
         </div>
