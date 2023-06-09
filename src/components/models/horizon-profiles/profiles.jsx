@@ -1,11 +1,16 @@
 import React from "react";
 
-export const Profile1 = ({ change }) => {
+export const Profile1 = ({ change, doIt }) => {
   return (
     <div className="w-[1300px] mt-[30px]">
       <div className="w-[100%] flex justify-between items-center">
         <div className="w-[38%] h-[5px] bg-[#707070]"></div>
-        <div className="bg-[#535E6F] h-[30px] w-[280px] font-medium fckin text-[#fff] items-center justify-center flex rounded-[30px]">
+        <div
+          onClick={() => {
+            doIt();
+          }}
+          className="bg-[#535E6F] cursor-pointer h-[30px] w-[280px] font-medium fckin text-[#fff] items-center justify-center flex rounded-[30px]"
+        >
           Horizon 3 - Market Leaders
         </div>
         <div className="w-[38%] h-[5px] bg-[#707070]"></div>
@@ -79,12 +84,17 @@ export const Profile1 = ({ change }) => {
     </div>
   );
 };
-export const Profile2 = ({ change }) => {
+export const Profile2 = ({ change, doIt }) => {
   return (
     <div className="w-[1300px] mt-[10px]">
       <div className="w-[100%] flex justify-between items-center">
         <div className="w-[35%] h-[5px] bg-[#707070]"></div>
-        <div className="bg-[#535E6F] h-[30px] w-[320px] font-medium fckin text-[#fff] items-center justify-center flex rounded-[30px]">
+        <div
+          onClick={() => {
+            doIt();
+          }}
+          className="bg-[#535E6F] h-[30px] w-[320px] font-medium fckin text-[#fff] items-center justify-center flex rounded-[30px]"
+        >
           Horizon 2 - Enterprise Innovators
         </div>
         <div className="w-[35%] h-[5px] bg-[#707070]"></div>
@@ -150,12 +160,17 @@ export const Profile2 = ({ change }) => {
     </div>
   );
 };
-export const Profile3 = ({ change }) => {
+export const Profile3 = ({ change, doIt }) => {
   return (
     <div className="w-[1300px] mt-[10px]">
       <div className="w-[100%] flex justify-between items-center">
         <div className="w-[38%] h-[5px] bg-[#707070]"></div>
-        <div className="bg-[#535E6F] h-[30px] w-[280px] font-medium fckin text-[#fff] items-center justify-center flex rounded-[30px]">
+        <div
+          onClick={() => {
+            doIt();
+          }}
+          className="bg-[#535E6F] h-[30px] w-[280px] font-medium fckin text-[#fff] items-center justify-center flex rounded-[30px]"
+        >
           Horizon 1 - Disruptors
         </div>
         <div className="w-[38%] h-[5px] bg-[#707070]"></div>

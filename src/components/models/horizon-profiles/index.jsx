@@ -3,8 +3,12 @@ import { useDispatch } from "react-redux";
 import { setCurr } from "../../../services/Model";
 import { Profile1, Profile2, Profile3 } from "./profiles";
 import Profile from "./profile";
+import SubData1 from "./sub-data-1";
+import SubData2 from "./sub-data-2";
+import SubData3 from "./sub-data-3";
 const HorizonProfiles = () => {
   const [curr, setCurr1] = useState(null);
+  const [newCurr, setNewCurr] = useState(null);
   const [trans, setTrans] = useState(true);
   const [src, setSrc] = useState("");
   const dispatch = useDispatch();
@@ -51,6 +55,9 @@ const HorizonProfiles = () => {
       />
       <div className="w-[100%] h-[100%] flex items-center justify-center flex-col">
         <Profile1
+          doIt={() => {
+            setNewCurr(0);
+          }}
           change={(e, src) => {
             setTrans(false);
             setTimeout(() => {
@@ -61,6 +68,9 @@ const HorizonProfiles = () => {
           }}
         />
         <Profile2
+          doIt={() => {
+            setNewCurr(1);
+          }}
           change={(e, src) => {
             setTrans(false);
             setTimeout(() => {
@@ -71,6 +81,9 @@ const HorizonProfiles = () => {
           }}
         />
         <Profile3
+          doIt={() => {
+            setNewCurr(2);
+          }}
           change={(e, src) => {
             setTrans(false);
             setTimeout(() => {
@@ -81,7 +94,42 @@ const HorizonProfiles = () => {
           }}
         />
       </div>
-
+      {newCurr === 0 && (
+        <SubData1
+          trans={trans}
+          close={() => {
+            setTrans(false);
+            setTimeout(() => {
+              setNewCurr(null);
+              setTrans(true);
+            }, 600);
+          }}
+        />
+      )}
+      {newCurr === 1 && (
+        <SubData2
+          trans={trans}
+          close={() => {
+            setTrans(false);
+            setTimeout(() => {
+              setNewCurr(null);
+              setTrans(true);
+            }, 600);
+          }}
+        />
+      )}
+      {newCurr === 2 && (
+        <SubData3
+          trans={trans}
+          close={() => {
+            setTrans(false);
+            setTimeout(() => {
+              setNewCurr(null);
+              setTrans(true);
+            }, 600);
+          }}
+        />
+      )}
       {curr !== null && (
         <Profile
           id={curr}
