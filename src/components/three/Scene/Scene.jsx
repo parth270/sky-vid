@@ -101,7 +101,7 @@ const Scene = ({ randoms }) => {
   const [chek, setChek] = useState(false);
 
   // useFrame(() => {
-  //   console.log(camera.rotation.y * THREE.MathUtils.RAD2DEG);
+  //   console.log(camera.rotation.y);
   //   console.log([camera.position.x, camera.position.y, camera.position.z]);
   // });
 
@@ -143,22 +143,58 @@ const Scene = ({ randoms }) => {
       });
     } else {
       if (chek) {
-        gsap.to(camera.rotation, {
-          y: -57.71844153327286* THREE.MathUtils.DEG2RAD,
-          duration: 0.8,
-          ease: Power2.easeInOut,
-        });
-        gsap.to(camera.position, {
-          x: -16.908693723653315,
-          y: 5,
-          z:10.681576501607207,
-          ease: Power2.easeInOut,
-          onComplete: () => {
-            setTimeout(() => {
-              setShow(true);
-            }, 200);
-          },
-        });
+        console.log(camera.rotation.y);
+        let rota = -57.71844153327286 * THREE.MathUtils.DEG2RAD;
+        let anotherRota = -0.9796786692796922;
+        let Pos1 = [-16.908693723653315, 5, 10.681576501607207];
+        let Pos2 = [
+          -16.606407509994337, 5.000000000000001, -11.145726966510669,
+        ];
+        if (
+          camera.rotation.y === 0.785398 ||
+          camera.rotation.y === -0.750492 ||
+          camera.rotation.y === -0.05236
+        ) {
+          gsap.to(camera.rotation, {
+            // y: -57.71844153327286* THREE.MathUtils.DEG2RAD,
+            y: anotherRota,
+            duration: 0.8,
+            ease: Power2.easeInOut,
+          });
+
+          // [-16.908693723653315, 5, 10.681576501607207],
+          gsap.to(camera.position, {
+            x: Pos2[0],
+            y: Pos2[1],
+            z: Pos2[2],
+            ease: Power2.easeInOut,
+            onComplete: () => {
+              setTimeout(() => {
+                setShow(true);
+              }, 200);
+            },
+          });
+        } else {
+          gsap.to(camera.rotation, {
+            // y: -57.71844153327286* THREE.MathUtils.DEG2RAD,
+            y: rota,
+            duration: 0.8,
+            ease: Power2.easeInOut,
+          });
+
+          // [-16.908693723653315, 5, 10.681576501607207],
+          gsap.to(camera.position, {
+            x: Pos1[0],
+            y: Pos1[1],
+            z: Pos1[2],
+            ease: Power2.easeInOut,
+            onComplete: () => {
+              setTimeout(() => {
+                setShow(true);
+              }, 200);
+            },
+          });
+        }
       } else {
         setChek(true);
       }

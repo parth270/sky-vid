@@ -1,6 +1,6 @@
 import React from "react";
 
-const Author0 = () => {
+const Author0 = ({trans}) => {
   return (
     <div className="w-[100%] h-[100%] pt-[20px] pb-[10px] px-[5%] flex">
       <div
@@ -9,6 +9,7 @@ const Author0 = () => {
           borderRight: "4px solid #505e71",
         }}
       >
+
         <img src="/author-2.png" className="w-[100%]" alt="" />
       </div>
       <div className="w-[75%] h-[100%] px-[30px]">

@@ -20,7 +20,7 @@ const Demographics = () => {
       <div className="h-[42px] rounded-[30px] bg-[#f17238]  px-[30px] min-w-[300px] flex items-center justify-center text-[20px] font-medium capitalize text-[#fff] ">
         <span className="translate-y-[1px]">Demographics</span>
       </div>
-      <div className="pb-[30px] pt-[20px] overflow-hidden  scroll-hidden w-[1300px] h-[580px] shrink-0 bg-[#ffffff90] backdrop-blur-lg mt-[20px] mb-[10px] rounded-[20px]">
+      <div className="pb-[30px] pt-[20px] overflow-hidden  scroll-hidden w-[100%] h-[100%] bg-[#ffffff90] backdrop-blur-lg mt-[20px]  rounded-[20px]">
         <div className="w-[100%] flex items-center h-[40px] justify-center absolute top-0 ">
           <img
             onClick={() => {
@@ -49,7 +49,7 @@ const Demographics = () => {
         {curr === 1 && <Guides trans={trans} />}
         {curr === 2 && <AboutUs trans={trans} />}
       </div>
-      <div className="w-[100%] h-[80px] flex items-center justify-center rotate-180 cursor-pointer">
+      <div className="w-[100%] absolute z-50 bottom-0 h-[80px] flex items-center justify-center rotate-180 cursor-pointer">
         <img
           src="/arrow.svg"
           onClick={() => {
